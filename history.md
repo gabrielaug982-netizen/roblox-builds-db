@@ -182,6 +182,18 @@
   Fire/Smoke do chao (FxFogoCentral/Oeste) subindo pelo furo.
 - lab_simples com 242 partes. database.json atualizado.
 
+## 2026-08-09 (sessao lab v7g - export unificado do lab_simples)
+- Usuario: "esta vendo o interior do lab? salve tudo junto e uni em uma estrutura".
+- Exportado o `lab_simples` inteiro (estrutura + interior + PortaLab + Fire/Smoke) como UM build:
+  - Biblioteca MCP: `modern/lab_simples.json` (242 partes, bounds 84.8x17.7x53) via export_build
+    (substituiu a entrada antiga de 115 partes).
+  - Backup completo: `models/lab_simples.rbxm` (13.4 KB) via export_rbxm, inclui as 2 Fire + 2 Smoke
+    e o modelo PortaLab (22 partes). O ProximityPrompt NAO vai no arquivo porque e criado em runtime
+    pelo ServerScriptService.PortaController (script fica fora do modelo).
+  - Verificada a integridade por re-import: 242 partes, fire=2, smoke=2, tetoAnel=28; duplicata
+    removida do Workspace.
+- database.json atualizado.
+
 ## Observacoes
 - Pesquisas de sci-fi/futurista no Creator Store estao retornando lixo (assets "car dealer").
   Tentar queries mais especificas em sessao futura (ex.: "spaceship hangar", "futuristic base").
