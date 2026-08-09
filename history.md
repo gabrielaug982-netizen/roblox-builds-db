@@ -57,6 +57,17 @@
 - Organizacao em pastas: Piso->Chao, Paredes (novos trechos norte), Portas, Iluminacao, Efeitos, Sinalizacao.
 - Registrados os 4 builds no `localBuilds[]` do database.json.
 
+## 2026-08-09 (sessao lab v5 - simplificacao)
+- Usuario achou o LabRadiacao (lab v1-v4) "esquisito e bugado" e pediu algo SIMPLES: estrutura, textura, janelas e teto explodido.
+- Apos confirmacao, o modelo `LabRadiacao` foi DELETADO do Workspace junto com `ServerScriptService.LabScripts` (FlickerLights/DoorsController).
+- Novo build `modern/lab_simples` (55 partes, 40.8x21.2x22.8) gerado e importado em Workspace na posicao [20, 0.4, 11]:
+  - Sala unica interior 40x22x10 (piso de concreto, paredes de concreto cinza-claro, 7 janelas de vidro 4x3.5 nas 4 faces, porta metalica entreaberta com faixa amarela no piso).
+  - Teto explodido: buraco central 16x10 com 4 lajes remanescentes, bordas irregulares carbonizadas inclinadas, fuligem sob o teto e detritos caidos no chao.
+  - Fogo + fumaca: `FxFogoCentral` (Heat 30, Size 9) e `FxFogoOeste` (Heat 20, Size 5) no buraco.
+  - Interior minimo: mesa de trabalho branca, console com tela Neon azul.
+- Causa do deslocamento do lab v4 durante playtest `mode=run` continua NAO determinada; a partir de agora usar `mode=play` (DataModel separado, nao corrompe o edit).
+- Registrado `modern/lab_simples` no `localBuilds[]` do database.json.
+
 ## Observacoes
 - Pesquisas de sci-fi/futurista no Creator Store estao retornando lixo (assets "car dealer").
   Tentar queries mais especificas em sessao futura (ex.: "spaceship hangar", "futuristic base").
