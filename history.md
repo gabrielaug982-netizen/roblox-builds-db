@@ -14,6 +14,14 @@
   - `sci-fi laboratory base facility` -> resultados ruins (car dealer etc.), nada salvo
 - Total: 64 assets publicos + 20 builds locais no banco.
 
+## 2026-08-09 (sessao laboratorio)
+- Reconstruido o `LabRadiacao` no Workspace: fechado como predio 56x56 em volta da cratera.
+  - Pastas preenchidas que estavam vazias: Paredes (8), Janelas (14), Teto (1), Bancadas (9),
+    Equipamentos (15: capela de exaustao, chuveiro, lava-olhos, painel), Danos (14 vergalhoes).
+  - Zonas de radiacao (6) reposicionadas em anel externo (raio 46) fora do predio; cratera/nucleo e
+    pocoes radioativas permanecem no interior.
+  - Novo build gerado e salvo na biblioteca: `modern/lab_radiologico` (61 partes, 58x21x58.2).
+
 ## 2026-08-09 (sessao igreja)
 - Inserida no Studio a igreja `Medieval Church` (assetId 4995693293, criador detonador665) em `game.Workspace`.
   - Modelo com interior: Church Roof, Crosses, Church Walls, Stone Walls, Doors & Windows, Interior Light (231 partes ancoradas).
