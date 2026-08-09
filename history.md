@@ -172,6 +172,16 @@
   solido; cantos do antigo retangulo cobertos. Unicos pontos abertos do teto = o circulo.
 - lab_simples com 252 partes (era 173; +92 criadas -13 removidas). database.json atualizado.
 
+## 2026-08-09 (sessao lab v7f - limpeza: sem destrocos voando, sem fogo na borda)
+- Usuario: "tire destroços voando" e depois "faltou um cubo pequeno e o fogo voando".
+- Removidos em Workspace:
+  - 7 DetritoAr (destrocos caindo dentro do furo) -> 252 - 7 = 245 partes.
+  - 3 FxFuroCentral/Oeste/Norte (cubos 0.5 suspensos a y17.25 na borda do furo, com Fire+Smoke) ->
+    eram o "cubo pequeno + fogo voando" -> 245 - 3 = 242 partes.
+- Manteve: pilha de 14 DetritoChao + 7 Vergalhao no chao, 9 DetritoTeto, 10 Fuligem no topo do teto,
+  Fire/Smoke do chao (FxFogoCentral/Oeste) subindo pelo furo.
+- lab_simples com 242 partes. database.json atualizado.
+
 ## Observacoes
 - Pesquisas de sci-fi/futurista no Creator Store estao retornando lixo (assets "car dealer").
   Tentar queries mais especificas em sessao futura (ex.: "spaceship hangar", "futuristic base").
