@@ -194,6 +194,19 @@
     removida do Workspace.
 - database.json atualizado.
 
+## 2026-08-09 (sessao lab v7h - unificacao LabCidade)
+- Usuario: "uni e salve o laboratorio, junto com o chao da cidade e carros".
+- Criado no Workspace o Model unificado `LabCidade` com 4 filhos (total 669 BaseParts):
+  - `Cidade` (Folder): chao 602x0.4x602.3 (1 UnionOperation, min(-308.2,0,-38.4) max(293.8,0.4,563.8)).
+  - `vehicle_red`: MeshPart 13.9x5.7x6.0 (min(-181.6,0.4,95.1)).
+  - `crashed car`: Model 425 partes (9.4x6.4x17.2).
+  - `lab_simples`: Model 242 partes (min(66.2,0.4,1.1) max(151,18.1,54.1), size 84.8x17.7x53).
+- `Workspace.Model` original mantido com 10 filhos (Chemicals, Goo Containers etc.).
+- Exportado:
+  - Biblioteca MCP: `modern/lab_cidade.json` (669 partes, bounds [602,18.1,602.3]) via export_build.
+  - Backup completo: `models/lab_cidade.rbxm` (925.6 KB) via export_rbxm (inclui Fire/Smoke).
+- database.json atualizado (entrada `modern/lab_cidade`).
+
 ## Observacoes
 - Pesquisas de sci-fi/futurista no Creator Store estao retornando lixo (assets "car dealer").
   Tentar queries mais especificas em sessao futura (ex.: "spaceship hangar", "futuristic base").
