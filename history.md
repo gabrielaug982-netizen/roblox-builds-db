@@ -153,6 +153,25 @@
   porta selada. lab_simples agora com 173 partes (2 novas).
 - database.json: nota do lab_simples atualizada (173 partes, z-118.42, cantos fechados).
 
+## 2026-08-09 (sessao lab v7e - buraco circular no teto + mais destrocos)
+- Usuario: "faça o buraco em cima em forma de circulo e com mais destroços".
+- Teto: buraco retangular 28x16 (x66.15..94.15, z-152.42..-136.42) -> CIRCULAR.
+  - Removidas 13 pecas da borda carbonizada retangular (Cobblestone na zona do furo).
+  - Anel de 28 segmentos TetoAnel_1..28 (raio interno 8, externo 16.6, centro x80.15 z-144.42)
+    preenchendo o teto ao redor do circulo e cobrindo os cantos do antigo retangulo. IMPORTANTE:
+    primeira tentativa usou CFrame.Angles(0,t,0) e os blocos ficaram com o eixo longo na direcao
+    errada (local Z <> radial), deixando buracos; corrigido com CFrame.lookAt(pos,pos+radial).
+  - Borda carbonizada circular: 14 BordaCarbonizada (Cobblestone escuro) tangentes ao circulo.
+- Mais destrocos:
+  - 9 DetritoTeto no teto ao redor do furo + 7 DetritoAr caindo dentro do furo.
+  - Pilha de 14 DetritoChao + 7 Vergalhao (rebar Metal) no chao abaixo do furo.
+  - 10 Fuligem (manchas finas escuras) no topo do teto ao redor do furo.
+  - 3 focos de fogo/fumaca novos na borda do furo: FxFuroCentral (Fire size 11 + Smoke 12),
+    FxFuroOeste (7/8), FxFuroNorte (6/7). Fire/Smoke do chao (FxFogoCentral/Oeste) sobem pelo furo.
+- Verificacao por raycast de cima (y30): dentro do circulo (r<7.2) SEM teto; fora (r>8.8) teto
+  solido; cantos do antigo retangulo cobertos. Unicos pontos abertos do teto = o circulo.
+- lab_simples com 252 partes (era 173; +92 criadas -13 removidas). database.json atualizado.
+
 ## Observacoes
 - Pesquisas de sci-fi/futurista no Creator Store estao retornando lixo (assets "car dealer").
   Tentar queries mais especificas em sessao futura (ex.: "spaceship hangar", "futuristic base").
