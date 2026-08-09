@@ -27,6 +27,11 @@
   20 janelas 4.5x7 (2 frontais, 6 laterais, 2 traseiras x vidro+moldura), porta 13 studs.
   Teto em y 18.5. Nucleo da cratera (y 1-11) continua no interior.
 
+## 2026-08-09 (sessao lab v3)
+- Corrigido: janelas agora tem VAGO REAL nas paredes (antes vidro colado em parede macica).
+  Paredes reconstruidas em segmentos ao redor das aberturas: 10 janelas 4.5x7 (vidro+molduras)
+  abertas nas 4 faces, porta 13 studs com vao. Build regenerado com 93 partes.
+
 ## 2026-08-09 (sessao igreja)
 - Inserida no Studio a igreja `Medieval Church` (assetId 4995693293, criador detonador665) em `game.Workspace`.
   - Modelo com interior: Church Roof, Crosses, Church Walls, Stone Walls, Doors & Windows, Interior Light (231 partes ancoradas).

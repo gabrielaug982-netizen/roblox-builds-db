@@ -91,7 +91,7 @@
     { "buildId": "modern/lab_janelas", "style": "modern", "parts": 21, "bounds": [25.2, 17.5, 22], "category": "lab" },
     { "buildId": "modern/lab_paredes", "style": "modern", "parts": 7, "bounds": [32, 20, 21.6], "category": "lab" },
     { "buildId": "modern/lab_piso_bancadas", "style": "modern", "parts": 11, "bounds": [26, 7, 26], "category": "lab" },
-    { "buildId": "modern/lab_radiologico", "style": "modern", "parts": 61, "bounds": [58, 33, 58.2], "category": "lab", "notes": "Laboratorio radiologico fechado (56x56, paredes 16 studs) em volta da cratera: 20 janelas grandes (4.5x7), porta 13 studs, teto, bancadas, capela de exaustao, chuveiro, lava-olhos, painel, faixas de aviso e vergalhoes expostos. Montado no Workspace dentro de LabRadiacao (93 partes totais com cenario de radiacao existente)." },
+    { "buildId": "modern/lab_radiologico", "style": "modern", "parts": 93, "bounds": [58, 33, 58], "category": "lab", "notes": "Laboratorio radiologico fechado (56x56, paredes 16 studs) em volta da cratera. Paredes com VAGOS REAIS: 10 janelas grandes (4.5x7) com vidro+molduras abertas nas 4 faces + porta 13 studs. Teto, bancadas, capela de exaustao, chuveiro, lava-olhos, painel, faixas de aviso e vergalhoes expostos. Montado no Workspace dentro de LabRadiacao." },
     { "buildId": "modern/office_tower_01", "style": "modern", "parts": 188, "bounds": [32, 168, 55], "category": "tower" },
     { "buildId": "modern/office_tower_02", "style": "modern", "parts": 1162, "bounds": [52, 267.6, 48], "category": "tower" },
     { "buildId": "modern/penthouse_01", "style": "modern", "parts": 287, "bounds": [115.8, 142, 60], "category": "building" },
