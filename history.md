@@ -91,6 +91,20 @@
 - Validado em playtest `mode=play`: E abre (folha em x22.9..25.9) e fecha (x18..22) corretamente. Edit permanece intacto (porta fechada, sem prompt salvo).
 - database.json atualizado: asset 92172398640603 registrado no `creatorStore[]`; nota do `modern/lab_simples` indica porta funcional.
 
+## 2026-08-09 (sessao lab v7 - janelas frontais)
+- Parede sul do `lab_simples` (que nao tinha janelas) ganhou 4 janelas PRONTAS do Creator Store:
+  asset 13064299369 "Modern Window (Set of 4)" (CmooseStudiosRoblox, verificado, sem scripts, 240 triangulos,
+  5 partes por janela: 1 painel preto translucido transp 0.6 + 4 molduras Smoky grey).
+- Posicionadas como `JanelaFrente_1..4` (filhas de lab_simples, ancoradas, 8x4x0.1 em z -116.6, y 4.5..8.5):
+  J1 x56..64, J2 x66..74, J3 x86..94, J4 x96..104; porta (x77.8..82.2) entre as duplas.
+- VAO REAL cortado na faixa inferior da parede sul (y 1.05..8.55): os 2 segmentos (x38..77.4 e x82.6..122)
+  foram substituidos por 10 pecas (ParedeSulSeg_1..10) deixando aberturas atras de cada janela +
+  ParedeSulSuperior (y 8.45..16.95) recriada. Raycast de dentro do lab confirma que os 4 vãos
+  enxergam o vidro (painel) das janelas — visiveis do interior.
+- Lab_simples agora com 167 partes (antes 139). Posicao do lab em mundo: x37.6..122.4, z-169.1..-116.2.
+- database.json atualizado: asset 13064299369 registrado no `creatorStore[]` (categoria nova `window`);
+  nota do `modern/lab_simples` indica as 4 janelas frontais com vao real.
+
 ## Observacoes
 - Pesquisas de sci-fi/futurista no Creator Store estao retornando lixo (assets "car dealer").
   Tentar queries mais especificas em sessao futura (ex.: "spaceship hangar", "futuristic base").
