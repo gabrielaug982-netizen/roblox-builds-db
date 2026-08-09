@@ -221,6 +221,28 @@
     ParticleEmitters e Script/Chemicals; script da porta fica fora do modelo).
 - database.json atualizado.
 
+## 2026-08-09 (sessao lab v7j - movimentacao unificada + backup total)
+- Problema relatado: "itens nao se movem junto" ao arrastar o LabCidade (urânio, tambores, etc.).
+- Causa 1: itens ancorados e sem welds ficavam para tras ao arrastar o chao.
+- Causa 2: 11 modelos estavam SOLTOS no Workspace (fora do LabCidade): 5x Uranium Bar, 2x Barrel
+  (UnionOperation), UraniumBomb, UNGROUP, Window Set, Model (36 partes). Foram movidos para dentro
+  de `LabCidade` e soldados.
+- Solucao de movimentacao unificada: todas as partes do LabCidade (exceto a folha deslizante da
+  porta, 17 partes) desancoradas e soldadas via WeldConstraint ao hub unico ancorado
+  `LabCidade.Cidade.Sinalizacao.Union`. Assim arrastar o chao move o lab inteiro com todos os itens.
+  (WeldConstraint em partes ancoradas nao propaga arrasto no Studio; por isso desancorou-se o conjunto.)
+- PortaController corrigido: buscava `workspace.lab_simples` mas o lab agora esta dentro de LabCidade.
+  Agora usa `workspace:WaitForChild("LabCidade"):WaitForChild("lab_simples")`.
+- Total: 801 BaseParts em LabCidade. Re-exportado:
+  - Biblioteca MCP: `modern/lab_cidade.json` (801 partes, bounds [602,23.7,602.3]).
+  - Backup completo: `models/lab_cidade.rbxm` (1.030.415 bytes).
+- BACKUP TOTAL solicitado pelo usuario ("salvar tudo pra se eu errar voltar ao estado atual"):
+  - `models/labdna_scripts.rbxm` (2.911 bytes): ServerScriptService.PortaController + Script + PLAYERDATA.
+  - `models/labdna_ui_remotes.rbxm` (8.555 bytes): StarterGui.InterfaceNivel + ReplicatedStorage.RemoteEvents.
+  - `backups/lab_cidade_buildlibrary_801.json` (109.489 bytes): copia do JSON da biblioteca MCP.
+  - Nova pasta `backups/` criada no repo.
+- database.json atualizado (entry modern/lab_cidade: 801 partes, notas de solda/backups).
+
 ## Observacoes
 - Pesquisas de sci-fi/futurista no Creator Store estao retornando lixo (assets "car dealer").
   Tentar queries mais especificas em sessao futura (ex.: "spaceship hangar", "futuristic base").
