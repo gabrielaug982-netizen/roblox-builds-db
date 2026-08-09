@@ -41,6 +41,22 @@
   - Asset anterior 9615867294 retorna 404 (removido/restrito).
 - Registrado asset 4995693293 no `creatorStore[]` (categoria church_gothic).
 
+## 2026-08-09 (sessao lab v4 - expansao)
+- Expansao do LabRadiacao: 4 modulos novos gerados e importados (todos compartilham a origem local com o nucleo, pos [712.9, 2.4, -39.3]):
+  - `modern/lab_entrada` (42 partes, 59x33x98) - ala de entrada/fachada (z local -48..-28,5)
+  - `modern/lab_controle` (74 partes, 107x33x98) - ala Leste (sala de controle)
+  - `modern/lab_armazem` (76 partes, 107x33x98) - ala Oeste (armazem)
+  - `modern/lab_tecnico` (83 partes, 72x33x98) - ala Norte (corredor tecnico)
+- Descobrimento chave: `import_build` ancora a ORIGEM LOCAL do modelo (nao o centro da bbox).
+- Vagos de porta cortados no nucleo (Leste/Oeste z -42,3..-36,3; Norte x 709,9..715,9) + 4 portas metalicas.
+- Piso interno do nucleo reconstruido (y 2,4..2,8) com fosso aberto para a cratera (buraco x696..730, z-56..-22); cratera/reator reposicionada ao centro.
+- Destruicao/efeitos: 5 marcas de queimadura, 6 escombros, painel de teto caido, 2 janelas quebradas + cacos, fogo no reator, fumaca nas pocoes/teto/janela.
+- Iluminacao: 17 luminarias fluorescentes com PointLight; script FlickerLights faz 8 piscarem.
+- Portas funcionais: ProximityPrompt + script DoorsController (dobradica por TweenService).
+- Sinalizacao: 5 placas SurfaceGui (PERIGO RADIACAO, SALA DE CONTROLE, ARMAZEM, fachada, placa lore).
+- Organizacao em pastas: Piso->Chao, Paredes (novos trechos norte), Portas, Iluminacao, Efeitos, Sinalizacao.
+- Registrados os 4 builds no `localBuilds[]` do database.json.
+
 ## Observacoes
 - Pesquisas de sci-fi/futurista no Creator Store estao retornando lixo (assets "car dealer").
   Tentar queries mais especificas em sessao futura (ex.: "spaceship hangar", "futuristic base").
