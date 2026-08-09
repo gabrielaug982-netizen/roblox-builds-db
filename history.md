@@ -207,6 +207,20 @@
   - Backup completo: `models/lab_cidade.rbxm` (925.6 KB) via export_rbxm (inclui Fire/Smoke).
 - database.json atualizado (entrada `modern/lab_cidade`).
 
+## 2026-08-09 (sessao lab v7i - itens do lab no LabCidade)
+- Usuario: "falta os itens dentro do laboratorio".
+- Movidos os 10 filhos de `Workspace.Model` para dentro de `LabCidade.lab_simples` (96 partes):
+  Chemicals (2), Goo Containers (2), frascos/garrafas com liquido (Cork/Liquid/Handle/Bottle),
+  MyDesk, Office Chair, luzes (LightConfig), mesas/bancadas, cubos de gelo com luz neon, etc.
+  Ja estavam posicionados dentro do lab (x73..144, z2..36); apenas re-parentados.
+- lab_simples: 242 -> 338 partes. LabCidade: 669 -> 765 BaseParts.
+- `Workspace.Model` ficou vazio e foi removido.
+- Re-exportado:
+  - Biblioteca MCP: `modern/lab_cidade.json` (765 partes, bounds [602,23.7,602.3]) via export_build.
+  - Backup completo: `models/lab_cidade.rbxm` (988.6 KB) via export_rbxm (inclui Fire/Smoke,
+    ParticleEmitters e Script/Chemicals; script da porta fica fora do modelo).
+- database.json atualizado.
+
 ## Observacoes
 - Pesquisas de sci-fi/futurista no Creator Store estao retornando lixo (assets "car dealer").
   Tentar queries mais especificas em sessao futura (ex.: "spaceship hangar", "futuristic base").
