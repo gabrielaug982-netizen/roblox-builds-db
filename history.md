@@ -14,6 +14,15 @@
   - `sci-fi laboratory base facility` -> resultados ruins (car dealer etc.), nada salvo
 - Total: 64 assets publicos + 20 builds locais no banco.
 
+## 2026-08-09 (sessao igreja)
+- Inserida no Studio a igreja `Medieval Church` (assetId 4995693293, criador detonador665) em `game.Workspace`.
+  - Modelo com interior: Church Roof, Crosses, Church Walls, Stone Walls, Doors & Windows, Interior Light (231 partes ancoradas).
+  - Bounding box: 31,9 x 72,8 x 80,2 studs; centrada em (1,72; 36,41; 7,85) — base em y=0.
+  - Para inserir assets de terceiros foi necessario: ativar "Permitir carregamento de conteudos de terceiros"
+    (Game Settings > Seguranca) e verificar idade da conta (verificacao por documento).
+  - Asset anterior 9615867294 retorna 404 (removido/restrito).
+- Registrado asset 4995693293 no `creatorStore[]` (categoria church_gothic).
+
 ## Observacoes
 - Pesquisas de sci-fi/futurista no Creator Store estao retornando lixo (assets "car dealer").
   Tentar queries mais especificas em sessao futura (ex.: "spaceship hangar", "futuristic base").
