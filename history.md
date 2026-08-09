@@ -74,6 +74,14 @@
 - Teto explodido ampliado: buraco central 24x14, bordas carbonizadas tortas, fuligem sob o teto, detritos caidos; Fire/Smoke recriados (FxFogoCentral/FxFogoOeste).
 - Reimportado em Workspace [20, 0.4, 11] e database.json atualizado.
 
+## 2026-08-09 (sessao lab v5c - escala pro jogador, porta pronta, vidro transparente)
+- `modern/lab_simples` ampliado de novo (104 -> 139 partes, 56.8x25.2x32.8 -> 84.8x33.2x52.8): sala unica interior 84x52x16 para escala de jogador.
+- Janelas transparentes (Transparency 0.7) e em maior numero: 12 vidros 6x5 com molduras pretas (6 norte, 3 leste, 3 oeste); parede sul sem janelas (entrada).
+- Porta de laboratorio PRONTA do Creator Store: asset 92172398640603 [FREE] Factory/Laboratory Door (22 partes, 4.8x7.3x1.1, decals) inserida na parede sul. Scripts removidos pela sanitizacao (insercao segura). Observacao: `Model:PivotTo` deixou 2 folhas da porta para tras no modelo sem PrimaryPart; solucionado movendo por delta do centro do bbox.
+- Vao da porta ampliado (5.2 x 7.5) para caber a porta; faixa amarela no piso na entrada.
+- Teto explodido ampliado: buraco central 28x16; Fire/Smoke recriados.
+- Reimportado em Workspace [20, 0.4, 11] e database.json atualizado.
+
 ## Observacoes
 - Pesquisas de sci-fi/futurista no Creator Store estao retornando lixo (assets "car dealer").
   Tentar queries mais especificas em sessao futura (ex.: "spaceship hangar", "futuristic base").
