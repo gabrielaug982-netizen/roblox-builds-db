@@ -120,6 +120,22 @@
   (vidro embutido, visivel dos dois lados). Total 167 partes (inalterado).
 - database.json: asset 13064299369 marcado como testado/substituido; nota do lab_simples atualizada.
 
+## 2026-08-09 (sessao lab v7c - janelas grandes de vidro)
+- Usuario pediu janelas "tipo laboratorio ja criada no roblox e MAIORES" e depois "quero vidro".
+- Asset 11963019007 "Factory Window" (11 partes, 0 scripts, 9.2x4.4x0.2): grade de aco com vidro
+  invisivel (transp 5) + decal de sujeira. Inserido 4x no Workspace, welds removidos, partes ancoradas,
+  escalado 1.5x (13.8x6.6) e posicionado nos vãos grandes. Usuario NAO gostou do estilo industrial.
+- Parede sul RECONSTRUIDA com 4 vãos GRANDES simetricos (janela 13.8x6.6 em y4.2..10.8, centros x
+  48.97/66.83/93.17/111.03, pilares/peitoris/vergas de 4.07 com simetria em torno da porta x80):
+  - 6 pilares ParedeSulPilar_1..6 (x38..122, y1.05..16.95)
+  - 4 peitoris (y1.05..4.2) + 4 vergas (y10.8..16.95) atras de cada janela
+  - 1 verga da porta (ParedeSulPortaVerga, x77.8..82.2, y8.45..16.95)
+- Janelas finais (aprovadas): VIDRO PROPRIO estilo norte ampliado — JanelaFrente_1..4 com Vidro
+  13x5.8x0.2 (Material Glass Light blue transp 0.7) embutido no centro da parede (z-116.7) + moldura
+  preta 13.8x6.6 flush na face interna (z-116.3). Raycast dos dois lados confirma visibilidade.
+- lab_simples com 171 partes. database.json: asset 11963019007 registrado (testado/rejeitado);
+  nota do lab_simples atualizada.
+
 ## Observacoes
 - Pesquisas de sci-fi/futurista no Creator Store estao retornando lixo (assets "car dealer").
   Tentar queries mais especificas em sessao futura (ex.: "spaceship hangar", "futuristic base").
