@@ -136,6 +136,23 @@
 - lab_simples com 171 partes. database.json: asset 11963019007 registrado (testado/rejeitado);
   nota do lab_simples atualizada.
 
+## 2026-08-09 (sessao lab v7d - alinhamento da parede sul)
+- Usuario: "as paredes nao estao se encontrando de forma satisfatoria".
+- Diagnosticado: a parede sul estava 1.72 studs AO SUL do footprint do lab (z-116.7), enquanto piso,
+  paredes laterais e PORTA estavam corretos (borda z-118.42). Furos de 1.32 nos cantos SW/SE.
+- Correcoes em Workspace:
+  - 15 pecas ParedeSul (6 pilares + 4 peitoris + 4 vergas + 1 verga da porta) movidas -1.72 em z ->
+    centro z-118.42, flush com o piso e as paredes laterais (raycast nos 4 cantos confirma).
+  - Pilares P1/P6 alargados ate x37.75 / x122.25 (flush com as faces externas das paredes oeste/leste).
+  - 4 janelas JanelaFrente_1..4 movidas -1.72 em z (vidro embutido em z-118.42, molduras z-118.02).
+  - PortaLab NAO foi movido (ja estava em z-118.97..-117.87, centro z-118.42 = centro da parede).
+  - PortaVerga (ParedeSulPortaVerga) estendida de y8.45..16.95 para y8.28..16.95, selando a fresta
+    de 0.15 acima do marco da porta (topo da folha y8.30).
+  - Cantos NW/NE fechados com 2 blocos novos CantoNorte_W/E (0.4x15.9x0.4 em x37.95/122.05, z-170.62).
+- Verificacao por raycast (y1.5..16.5, x37.75..122.25): SUL, NORTE e LATERAIS SEM furos; regiao da
+  porta selada. lab_simples agora com 173 partes (2 novas).
+- database.json: nota do lab_simples atualizada (173 partes, z-118.42, cantos fechados).
+
 ## Observacoes
 - Pesquisas de sci-fi/futurista no Creator Store estao retornando lixo (assets "car dealer").
   Tentar queries mais especificas em sessao futura (ex.: "spaceship hangar", "futuristic base").
