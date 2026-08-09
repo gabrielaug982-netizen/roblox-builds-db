@@ -68,6 +68,12 @@
 - Causa do deslocamento do lab v4 durante playtest `mode=run` continua NAO determinada; a partir de agora usar `mode=play` (DataModel separado, nao corrompe o edit).
 - Registrado `modern/lab_simples` no `localBuilds[]` do database.json.
 
+## 2026-08-09 (sessao lab v5b - maior e janelas arrumadas)
+- `modern/lab_simples` ampliado (55 -> 104 partes, 40.8x21.2x22.8 -> 56.8x25.2x32.8).
+- Sala unica agora interior 56x32x12. Janelas uniformizadas: 10 janelas de vidro 6x5 (4 em cada lado longo, 2 em cada lateral) todas com moldura preta; porta metalica central na parede sul com faixa amarela.
+- Teto explodido ampliado: buraco central 24x14, bordas carbonizadas tortas, fuligem sob o teto, detritos caidos; Fire/Smoke recriados (FxFogoCentral/FxFogoOeste).
+- Reimportado em Workspace [20, 0.4, 11] e database.json atualizado.
+
 ## Observacoes
 - Pesquisas de sci-fi/futurista no Creator Store estao retornando lixo (assets "car dealer").
   Tentar queries mais especificas em sessao futura (ex.: "spaceship hangar", "futuristic base").
