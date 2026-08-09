@@ -105,6 +105,21 @@
 - database.json atualizado: asset 13064299369 registrado no `creatorStore[]` (categoria nova `window`);
   nota do `modern/lab_simples` indica as 4 janelas frontais com vao real.
 
+## 2026-08-09 (sessao lab v7b - janelas frontais trocadas por vidro proprio)
+- Usuario achou as janelas do asset 13064299369 (Modern Window Set of 4) "estranhas".
+- Causa raiz: ao reposicionar, as partes foram parar em z=-118.3 (1.7 studs FORA da parede, que vai de
+  -117.1 a -116.3) — janelas flutuando na frente da fachada. Alem disso, as molduras de 0.1 do asset
+  eram tao finas que o conjunto parecia quebrado (painel preto 4x3.8 dentro de um bbox 8x4).
+- Trocadas por VIDRO PROPRIO no estilo das janelas do norte (Material Glass, Light blue, transp 0.7):
+  4x `JanelaFrente_1..4` (5 partes cada, filhas de lab_simples, ancoradas):
+  - Vidro 7.6x3.5x0.2 embutido no CENTRO da parede (z -116.7), y 4.75..8.25, x cx+-3.8
+  - Moldura preta (Plastic) preenchendo o vao 8x3.9, flush na FACE INTERNA (z -116.3):
+    MolduraTopo/Base 8.0x0.4, MolduraEsq/Dir 0.4x3.9.
+  - cx: 60, 70, 90, 100 (porta entre x74 e x86).
+- Verificado por raycast dos dois lados: de dentro acerta Vidro@z-116.6, de fora Vidro@z-116.8
+  (vidro embutido, visivel dos dois lados). Total 167 partes (inalterado).
+- database.json: asset 13064299369 marcado como testado/substituido; nota do lab_simples atualizada.
+
 ## Observacoes
 - Pesquisas de sci-fi/futurista no Creator Store estao retornando lixo (assets "car dealer").
   Tentar queries mais especificas em sessao futura (ex.: "spaceship hangar", "futuristic base").
