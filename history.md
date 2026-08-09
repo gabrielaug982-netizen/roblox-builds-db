@@ -82,6 +82,15 @@
 - Teto explodido ampliado: buraco central 28x16; Fire/Smoke recriados.
 - Reimportado em Workspace [20, 0.4, 11] e database.json atualizado.
 
+## 2026-08-09 (sessao lab v6 - porta funcional)
+- Porta do lab_simples (PortaLab, asset 92172398640603) agora ABRE/FECHA.
+- Removidos os 44 Welds do asset (todas as 22 partes sao ancoradas, welds so atrapalhavam a animacao).
+- Criado `ServerScriptService.PortaController`: classifica a folha deslizante (17 partes movem; 3 montantes + verga + soleira fixos), cria ProximityPrompt ("Abrir porta", E, dist 7) em runtime e faz toggle com TweenService 0.8s.
+- Descobrimento: as partes do asset tem rotacoes locais variadas — usar multiplicacao local (`CFrame * CFrame.new(delta)`) NAO funciona; usar translacao em ESPACO-MUNDO (`CFrame.new(pos+delta) * rotacao`).
+- Folha desliza +X 4.4 studs (para dentro da parede sul, do lado direito) e +Z 0.45 (para fora, evitando z-fight com o montante).
+- Validado em playtest `mode=play`: E abre (folha em x22.9..25.9) e fecha (x18..22) corretamente. Edit permanece intacto (porta fechada, sem prompt salvo).
+- database.json atualizado: asset 92172398640603 registrado no `creatorStore[]`; nota do `modern/lab_simples` indica porta funcional.
+
 ## Observacoes
 - Pesquisas de sci-fi/futurista no Creator Store estao retornando lixo (assets "car dealer").
   Tentar queries mais especificas em sessao futura (ex.: "spaceship hangar", "futuristic base").
