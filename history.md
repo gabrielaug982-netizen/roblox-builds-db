@@ -388,3 +388,18 @@
 - Testado no playtest 2026-08-11: msg no topo y=12 (viewport), todos os estados + pulso
   confirmados; clique real em ABRIR (1028,699) nasceu a galinha fora e a UI resetou.
 - database.json atualizado (misc/ovo_verde_01: mensagem no topo).
+
+## 2026-08-11 (sessao incubadora v4 - interacao E na incubadora)
+- BOTOES GUI REMOVIDOS. Incubar/Abrir agora sao ProximityPrompts E DIRETO NA INCUBADORA
+  (dome Meshes/IceysAssetPack_Circle (1), dist 9, ClickablePrompt=false): prompt 'Incubar'
+  (habilita qdo nao incubando) e prompt 'Abrir' (habilitado pelo servidor apos os 20s).
+  Remotes IncubarOvo/AbrirIncubador deletados; so resta IncubadorEstado (broadcast p/ timer).
+- GALINHA INICIAL AUTOMATICA REMOVIDA: GalinhaVerdeScript agora so garante o template
+  (waitTemplate); a UNICA galinha nasce pelo choco na incubadora. Corrige o bug do jogador ver
+  galinha 'spawnando ao por o ovo' (era a inicial aparecendo).
+- Mensagem no topo mantida, textos ajustados p/ E: 'APERTE E PARA INCUBAR' / 'CHOCANDO OVO... Xs' /
+  'APERTE E PARA ABRIR' (dourado + pulso).
+- Testado no playtest 2026-08-11 com E real (simulate_keyboard_input): sem galinha inicial,
+  E incuba (ovo dentro, tool consumido, Incubar desliga), timer 20s habilita Abrir, E abre
+  (ovo destruido, galinha nasce em -12,1.5,-2.5, prompts resetados). client-1 ve 1 galinha.
+- database.json atualizado (misc/ovo_verde_01 e misc/galinha_verde_01: interacao E, sem galinha inicial).
