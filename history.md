@@ -346,3 +346,17 @@
 
 
 
+
+## 2026-08-11 (sessao incubadora)
+- Nova mecanica: ovo estranho -> incubadora -> choco -> galinha nasce FORA.
+- Criado ServerScriptService.GalinhaModule (ModuleScript): gera o template da galinha no
+  servidor (retry 6x/5s, ScaleTo 1.6, template em ServerStorage) e expoe ensureGenerated/
+  waitTemplate/spawnChicken/makeTool. GalinhaVerdeScript agora so waitTemplate+spawnChicken(6,1.5,2).
+- OvoVerdeScript: segurando o ovo (tool) e a <8 studs horizontais do workspace.Incubator,
+  clicar COLOCA o ovo DENTRO da incubadora (pos -12,3.1,-6, anc=true, prompt desligado, wobble
+  rotatorio). Apos 20s o ovo some e a galinha nasce FORA, em -12,1.5,-2.5 (frente da incubadora),
+  via GalinhaModule.spawnChicken. Flag incubating evita 2 ovos simultaneos.
+- Testado no playtest 2026-08-11: pega o ovo (prompt), clica perto da incubadora, ovo entra
+  (-12,3.1,-6 dentro do bounding), apos 20s ovo destruido e galinha nova em -12,1.5,-2.5 com
+  mesh Content{Opaque} (conteudo real). client-1 ve as 2 galinhas (6,1.5,2 e -12,1.5,-2.5).
+- database.json atualizado (misc/ovo_verde_01 e misc/galinha_verde_01: mecanica da incubadora).
