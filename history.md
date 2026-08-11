@@ -257,6 +257,11 @@
   (BrilhoNeon, Brightness 2, Range 12). Script e prompt atualizados (WaitForChild("ovo estranho"),
   tool "ovo estranho", ObjectText "ovo estranho"). Biblioteca re-exportada (palette Neon).
 - Cor ajustada para NEON VERDE classico #39FF14 (Color3(57,255,20)) no material e no PointLight.
+- Galinha verde criada: primeiro versao em blocos (10 partes: corpo/cabeca/crista/bico/barbela/cauda/asas/pernas),
+  mecanica de segurar igual ao ovo (prompt E + tool com welds). Depois a SKIN foi MELHORADA em 3D:
+  modelo gerado por IA (GenerationService Body1, 1 MeshPart 1.23x1.91x1.83) verde SmoothPlastic,
+  substituindo a de blocos. GalinhaVerdeScript usa PrimaryPart como Handle da tool.
+  Backup em models/galinha_verde.rbxm. Registrado em localBuilds misc/galinha_verde_01.
 
 ## Observacoes
 - Pesquisas de sci-fi/futurista no Creator Store estao retornando lixo (assets "car dealer").
