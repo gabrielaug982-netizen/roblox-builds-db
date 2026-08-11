@@ -375,3 +375,16 @@
   espaco de tela cheia, somar ~58px do top inset): INCUBAR colocou o ovo, timer zerou, ABRIR
   destruiu o ovo e galinha nasceu em -12,1.5,-2.5. client-1 viu as galinhas.
 - database.json atualizado (misc/ovo_verde_01 e misc/galinha_verde_01: botoes INCUBAR/ABRIR + timer).
+
+## 2026-08-11 (sessao incubadora v3 - mensagem no topo)
+- Mensagem da GUI movida p/ o TOPO da tela e estilizada: Frame 'MessageFrame' pill (AnchorPoint
+  0.5,0, Y 70 por causa do inset de 58px do cliente, UICorner 28, UIStroke verde, fundo escuro
+  translucido) + MessageLabel (GothamBlack, TextScaled, contorno preto).
+- Textos/cores por estado: 'PEGUE O OVO E INCUBE!' (branco, sem ovo), 'APERTE INCUBAR PARA
+  COLOCAR O OVO' (branco, com ovo), 'CHOCANDO OVO... Xs' (verde), 'PRONTO! APERTE ABRIR'
+  (dourado + pulso de escala via TweenService 540x60<->500x56).
+- Mensagem visivel mesmo afastado durante o choco (near OR incubating). Botoes INCUBAR/ABRIR
+  com UICorner arredondado.
+- Testado no playtest 2026-08-11: msg no topo y=12 (viewport), todos os estados + pulso
+  confirmados; clique real em ABRIR (1028,699) nasceu a galinha fora e a UI resetou.
+- database.json atualizado (misc/ovo_verde_01: mensagem no topo).
