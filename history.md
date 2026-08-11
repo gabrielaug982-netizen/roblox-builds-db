@@ -428,3 +428,20 @@
   segue com hop visivel, Y oscilando 1.63-1.82 durante a corrida); tool drop segue; altura do pe
   correta (char root 3.3 -> galinha y~1.6).
 - database.json atualizado (misc/ovo_verde_01 e misc/galinha_verde_01: animacao de andar + solta segue).
+
+## 2026-08-11 (sessao incubadora v7 - nome/tag + mensagem so com ovo)
+- GALINHA RENOMEADA para 'Galinha Mutante' (modelo, Tool e prompt ObjectText; antes 'galinha verde').
+- NOME VERDE ACIMA DELA: BillboardGui NameTag no MeshPart (Mesh) com TextLabel 'GALINHA MUTANTE'
+  cor #39FF14, StudsOffset (0,3.2,0), MaxDistance=20 (aparece so de perto), AlwaysOnTop + contorno
+  preto; Enabled=false nos clones da Tool (nao aparece segurando).
+- MENSAGEM NO TOPO SIMPLIFICADA: IncubadorClient agora mostra 'APERTE E PARA INCUBAR' (branco) SO
+  enquanto o jogador SEGURA o ovo a <25 studs da incubadora; oculta em qualquer outro estado.
+  Mensagens de choco/abrir (CHOCANDO OVO... Xs, APERTE E PARA ABRIR + pulso) e 'PEGUE O OVO'
+  removidas.
+- CONFLITO DE PROMPTS corrigido: com a galinha seguindo, o E perto da incubadora pegava a galinha
+  (prompt PegarGalinha dist 8 vs Incubar/Abrir dist 9). makeFollow agora desliga o prompt
+  PegarGalinha quando o jogador seguido esta a <12 studs da incubadora.
+- Testado no playtest 2026-08-11: nome/tag replicados no cliente (GALINHA MUTANTE, cor verde,
+  MaxDistance 20); fluxo completo ovo->Incubar->20s->Abrir->galinha 'Galinha Mutante' nasce e segue
+  sem o E pega-la; mensagem so com ovo segurando perto (oculta sem ovo e longe).
+- database.json atualizado (misc/ovo_verde_01 e misc/galinha_verde_01: nome/tag + mensagem so com ovo).
