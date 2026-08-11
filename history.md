@@ -262,6 +262,7 @@
   modelo gerado por IA (GenerationService Body1, 1 MeshPart 1.23x1.91x1.83) verde SmoothPlastic,
   substituindo a de blocos. GalinhaVerdeScript usa PrimaryPart como Handle da tool.
   Backup em models/galinha_verde.rbxm. Registrado em localBuilds misc/galinha_verde_01.
+- Tamanho da galinha DOBRADO (2.46x3.83x3.66, BASE_Y=1.91).
 
 ## Observacoes
 - Pesquisas de sci-fi/futurista no Creator Store estao retornando lixo (assets "car dealer").
