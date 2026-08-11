@@ -284,3 +284,28 @@
 ## Observacoes
 - Pesquisas de sci-fi/futurista no Creator Store estao retornando lixo (assets "car dealer").
   Tentar queries mais especificas em sessao futura (ex.: "spaceship hangar", "futuristic base").
+
+## 2026-08-11 (sessao Place1 - galinha mesh IA FUNCIONANDO)
+- Causa raiz encontrada: o tool MCP `generate_model` (e as chamadas antigas) usavam params errados,
+  por isso o MeshPart retornava com MeshId='' e 0 triangulos (renderizava como bloco verde).
+  Sintoma fechado: chamada direta com MaxTriangles>20000 era REJEITADA pelo backend
+  ("MaxTriangles must be at most 20000 in inputs") — prova de que a assinatura certa chegava no servidor.
+- FIX: GenerationService:GenerateModelAsync DIRETO com inputs corretos:
+  {TextPrompt="cute green cartoon chicken...", Size=Vector3(2.5,3.5,3), MaxTriangles=20000,
+  GenerateTextures=false} + schema {PredefinedSchema="Body1"} -> MeshPart 1.96x3.01x3 com ~17k triangulos.
+- Provas de geometria REAL: scene analysis edit 7070 -> 24080 triangulos (+17010 = galinha);
+  raycast do alto atinge a superficie (pos y=2.64, normal detalhada); tamanho fiel ao Size pedido.
+  Mesh fica EMBUTIDA como EditableMesh (MeshId='' no inspector).
+- LIMITACAO: a mesh embutida NAO sobrevive a export/import .rbxm (raycast do reimport = false;
+  rbxm de 46KB quase igual ao vazio de 42KB). Persiste somente salvando o lugar (.rbxl, Ctrl+S) —
+  mesmo comportamento de qualquer mesh gerada pela IA nativa do Studio. Backup via rbxm inviavel.
+- Galinha montada no Place1: Workspace['galinha verde'] = Model (body > body_geom MeshPart verde
+  SmoothPlastic, anc=true, pivot (6,1.5,2)), ProximityPrompt PegarGalinha (E, dist 8) dentro do mesh.
+  GalinhaVerdeScript com BASE_Y=1.5.
+- Ciclo completo testado em playtest: E pega -> Tool 'galinha verde' no backpack (Handle = MeshPart
+  clonado, mesh preservada in-session); clique -> respawna galinha no mundo com prompt re-conectado.
+  Verificado no edit apos parar o playtest: geometria continua real (raycast true).
+- Models em partes (10 e 14 pecas) removidos/descartados. Screenshot nao verificavel por mim
+  (modelo de IA sem suporte a imagem) — pedir confirmacao visual ao usuario.
+- database.json atualizado (misc/galinha_verde_01: 1 MeshPart ~17k tris, bounds [2,3,3]).
+
