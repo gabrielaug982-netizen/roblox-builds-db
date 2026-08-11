@@ -256,6 +256,7 @@
 - Ovo atualizado: renomeado para "ovo estranho", material NEON (verde claro) + PointLight
   (BrilhoNeon, Brightness 2, Range 12). Script e prompt atualizados (WaitForChild("ovo estranho"),
   tool "ovo estranho", ObjectText "ovo estranho"). Biblioteca re-exportada (palette Neon).
+- Cor ajustada para NEON VERDE classico #39FF14 (Color3(57,255,20)) no material e no PointLight.
 
 ## Observacoes
 - Pesquisas de sci-fi/futurista no Creator Store estao retornando lixo (assets "car dealer").
