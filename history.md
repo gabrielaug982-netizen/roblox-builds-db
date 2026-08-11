@@ -360,3 +360,18 @@
   (-12,3.1,-6 dentro do bounding), apos 20s ovo destruido e galinha nova em -12,1.5,-2.5 com
   mesh Content{Opaque} (conteudo real). client-1 ve as 2 galinhas (6,1.5,2 e -12,1.5,-2.5).
 - database.json atualizado (misc/ovo_verde_01 e misc/galinha_verde_01: mecanica da incubadora).
+
+## 2026-08-11 (sessao incubadora v2 - botoes GUI)
+- Mecanica trocada p/ botoes: GUI StarterGui.IncubadorGUI (painel embaixo no centro) com botao
+  'INCUBAR' + botao 'ABRIR' + timer. LocalScript IncubadorClient mostra o painel quando o jogador
+  fica a <25 studs da incubadora; INCUBAR visivel so segurando o ovo.
+- Remotes: ReplicatedStorage.IncubarOvo / AbrirIncubador / IncubadorEstado.
+- Servidor (OvoVerdeScript): INCUBAR valida (<20 studs, tem tool, nao incubando) -> remove tool,
+  coloca o ovo DENTRO (-12,3.1,-6, anc=true, wobble) e broadcast {started=true}. Timer 20s no
+  cliente (CHOCANDO: Xs) -> 'PRONTO! APERTE ABRIR' + botao ABRIR. ABRIR valida 20s, destroi o ovo
+  e spawna a galinha FORA em -12,1.5,-2.5 (GalinhaModule.spawnChicken); broadcast {started=false}.
+- Clique com o tool perto da incubadora agora NAO solta o ovo (usa o botao).
+- Testado com cliques REAIS no playtest 2026-08-11 (simulate_mouse_input; nota: GUI hit-test usa
+  espaco de tela cheia, somar ~58px do top inset): INCUBAR colocou o ovo, timer zerou, ABRIR
+  destruiu o ovo e galinha nasceu em -12,1.5,-2.5. client-1 viu as galinhas.
+- database.json atualizado (misc/ovo_verde_01 e misc/galinha_verde_01: botoes INCUBAR/ABRIR + timer).
