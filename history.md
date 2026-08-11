@@ -253,6 +253,9 @@
 - Ciclo completo testado no playtest (pega -> solta -> pega). Exportado na biblioteca MCP.
 - Explorado: plugins de textura/iluminacao no Creator Store (LightForge 134789936186393,
   Texture Library Tool 4822976854 etc.) — download bloqueado (assetdelivery 401, precisa auth da Toolbox).
+- Ovo atualizado: renomeado para "ovo estranho", material NEON (verde claro) + PointLight
+  (BrilhoNeon, Brightness 2, Range 12). Script e prompt atualizados (WaitForChild("ovo estranho"),
+  tool "ovo estranho", ObjectText "ovo estranho"). Biblioteca re-exportada (palette Neon).
 
 ## Observacoes
 - Pesquisas de sci-fi/futurista no Creator Store estao retornando lixo (assets "car dealer").
