@@ -309,3 +309,18 @@
   (modelo de IA sem suporte a imagem) — pedir confirmacao visual ao usuario.
 - database.json atualizado (misc/galinha_verde_01: 1 MeshPart ~17k tris, bounds [2,3,3]).
 
+## 2026-08-11 (sessao Place1 - galinha com TEXTURA)
+- Usuario: "ficou sem divisao de cor e detalhes" (mesh verde chapado, GenerateTextures=false).
+- Regenerada com GenerateTextures=true + prompt detalhado ("green body with light green belly,
+  red comb and red wattle, orange beak, orange legs, white tail feathers"). MeshPart retornou
+  com TextureContent=Content{Opaque} = textura EMBUTIDA com divisao de cor.
+- Descoberta: MeshPart tem props MeshContent/TextureContent (novas, Content); MCP inspector e
+  leitura por runtime mostram SourceType=None em server/client mas o raycast PROVA que a geometria
+  existe no edit, no servidor e no cliente do playtest (limitacao de leitura do content embutido).
+- Escala ScaleTo(1.6) -> 1.97x2.98x3.07 (igual ao tamanho da verde anterior). Renomeada p/ substituir
+  a chapada em Workspace['galinha verde'] (pos 6,1.5,2). Clone verificado: preserva TextureContent.
+- Ciclo pega re-testado no playtest (E -> Tool 'galinha verde' no backpack, Handle=MeshPart com textura).
+- Lembrete ao usuario: salvar o lugar (Ctrl+S) para persistir mesh+textura embutidas no .rbxl.
+- database.json atualizado (GenerateTextures=true, TextureContent embutida, bounds [2,3,3]).
+
+
