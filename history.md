@@ -264,6 +264,23 @@
   Backup em models/galinha_verde.rbxm. Registrado em localBuilds misc/galinha_verde_01.
 - Tamanho da galinha DOBRADO (2.46x3.83x3.66, BASE_Y=1.91).
 
+## 2026-08-11 (sessao Place1 - galinha de partes)
+- Diagnostico: a galinha IA estava SEM MESH (MeshPart body_geom com MeshId vazio) — renderizava como
+  bloco verde e sem skin na mao. 2 geracoes (galinha_3d, galinha_3d_v2) falharam igual (MeshId="").
+- Confirmado que plugin NAO abre UI do Studio (docs do StudioService so tem PromptImportFile(s));
+  simulador de teclado/mouse so age no jogo em playtest. Nao da para abrir Game Settings por script.
+- Galinha reconstruida COM PARTES (14 pecas SmoothPlastic, verde 86,200,86; crista+barbela vermelhas
+  220,40,40; bico+pernas+pes laranja 255,140,40): Handle corpo Ball 1.9x2x1.7, Cabeca Ball,
+  Crista1-3, Bico, Barbela, Cauda (rot -45), AsaEsquerda/Direita Ball, PernaEsquerda/Direita,
+  PeEsquerdo/Direito. PrimaryPart=Handle. Substituiu o mesh quebrado em Workspace["galinha verde"].
+- GalinhaVerdeScript: BASE_Y 1.91 -> 1.5; soltar agora usa SetPrimaryPartCFrame (corpo = pivo do
+  modelo, patas no chao) em vez de PivotTo. Ciclo pega/solta testado de ponta a ponta em playtest
+  (E pega -> tool com 14 partes no backpack; clique -> galinha no mundo com menorY 0.12 + prompt).
+- Upgrade futuro p/ mesh real: habilitar "Allow Loading Third Party Assets" (Game Settings > Security)
+  e inserir galinha do Creator Store (candidatas 4376443752 "Chicken" ou 117701041346529
+  "Stylized Chicken"; preview/insert bloqueado sem a permissao).
+- database.json: entrada misc/galinha_verde_01 atualizada (14 partes, bounds [2.3,3.1,2.1]).
+
 ## Observacoes
 - Pesquisas de sci-fi/futurista no Creator Store estao retornando lixo (assets "car dealer").
   Tentar queries mais especificas em sessao futura (ex.: "spaceship hangar", "futuristic base").
