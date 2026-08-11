@@ -243,6 +243,17 @@
   - Nova pasta `backups/` criada no repo.
 - database.json atualizado (entry modern/lab_cidade: 801 partes, notas de solda/backups).
 
+## 2026-08-11 (sessao Place1 - ovo pickavel)
+- Novo build `misc/ovo_verde_01`: ovo verde de galinha (1 Part Ball SmoothPlastic verde, 1.6x2.2x1.6)
+  em `Workspace.OvoVerde` (pos 4,1.1,0), ProximityPrompt (E, dist 7) + `ServerScriptService.OvoVerdeScript`.
+- Mecanica: E pega o ovo -> vira Tool "Ovo Verde" no Backpack (handle anc=false col=false, prompt off);
+  clique com a tool -> solta o ovo na frente do jogador e respawna o modelo com prompt.
+- Bug encontrado/corrigido: forward declaration `local connectEgg` (referencia antes da declaracao
+  resolvia p/ nil e abortava antes do tool:Destroy).
+- Ciclo completo testado no playtest (pega -> solta -> pega). Exportado na biblioteca MCP.
+- Explorado: plugins de textura/iluminacao no Creator Store (LightForge 134789936186393,
+  Texture Library Tool 4822976854 etc.) — download bloqueado (assetdelivery 401, precisa auth da Toolbox).
+
 ## Observacoes
 - Pesquisas de sci-fi/futurista no Creator Store estao retornando lixo (assets "car dealer").
   Tentar queries mais especificas em sessao futura (ex.: "spaceship hangar", "futuristic base").

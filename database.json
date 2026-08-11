@@ -1,8 +1,8 @@
 {
   "meta": {
     "description": "Banco de dados publico de construcoes para projetos Roblox (Creator Store + builds locais do Studio).",
-    "lastUpdated": "2026-08-09",
-    "lastSearch": "2026-08-09",
+    "lastUpdated": "2026-08-11",
+    "lastSearch": "2026-08-11",
     "sources": [
       "Roblox Creator Store (create.roblox.com)",
       "Biblioteca local de builds do Studio (MCP Roblox Studio)"
@@ -108,6 +108,7 @@
     { "buildId": "modern/predio_grande_01", "style": "modern", "parts": 82, "bounds": [55, 32.5, 32], "category": "building" },
     { "buildId": "modern/villa_01", "style": "modern", "parts": 23, "bounds": [26, 21, 44], "category": "house" },
     { "buildId": "nature/cabin_01", "style": "nature", "parts": 27, "bounds": [18, 22, 22], "category": "cabin" },
-    { "buildId": "scifi/spire_01", "style": "scifi", "parts": 236, "bounds": [24, 202, 141.5], "category": "spire" }
+    { "buildId": "scifi/spire_01", "style": "scifi", "parts": 236, "bounds": [24, 202, 141.5], "category": "spire" },
+    { "buildId": "misc/ovo_verde_01", "style": "misc", "parts": 1, "bounds": [1.6, 2.2, 1.6], "category": "prop", "notes": "Ovo verde de galinha pickavel (1 Part Ball SmoothPlastic verde em Workspace.OvoVerde, pos 4,1.1,0). ProximityPrompt (E, dist 7) + ServerScriptService.OvoVerdeScript: pega = vira Tool 'Ovo Verde' no Backpack (handle anc=false col=false, prompt desligado); clique com a tool = solta o ovo na frente do jogador (respawna modelo completo com prompt). Ciclo pega/solta testado no Place1 2026-08-11. Exportado na biblioteca MCP (misc/ovo_verde_01.json)." }
   ]
 }
