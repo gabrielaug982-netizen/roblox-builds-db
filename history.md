@@ -403,3 +403,13 @@
   E incuba (ovo dentro, tool consumido, Incubar desliga), timer 20s habilita Abrir, E abre
   (ovo destruido, galinha nasce em -12,1.5,-2.5, prompts resetados). client-1 ve 1 galinha.
 - database.json atualizado (misc/ovo_verde_01 e misc/galinha_verde_01: interacao E, sem galinha inicial).
+
+## 2026-08-11 (sessao incubadora v5 - galinha segue o jogador)
+- NOVO: a galinha que nasce do choco agora SEGUE o jogador que abriu a incubadora.
+  GalinhaModule.makeFollow(chicken, player): loop no servidor (task.spawn, tick 0.1s) move o
+  MeshPart via CFrame (anc=true) em direcao ao jogador a ~8 studs/s, para a ~3.5 studs e vira
+  p/ o jogador; encerra quando a galinha e destruida (pega). OvoVerdeScript passa o player de
+  AbrirPrompt.Triggered -> finishIncubation(player) -> makeFollow.
+- Testado no playtest 2026-08-11: galinha nasceu em -12,1.5,-2.5 e seguiu o jogador por ~40 studs
+  (teleport p/ 30,1,10) ate parar a ~3.5 studs dele. Chicken droppada/clique continua sem follow.
+- database.json atualizado (misc/ovo_verde_01 e misc/galinha_verde_01: makeFollow).
