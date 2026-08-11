@@ -413,3 +413,18 @@
 - Testado no playtest 2026-08-11: galinha nasceu em -12,1.5,-2.5 e seguiu o jogador por ~40 studs
   (teleport p/ 30,1,10) ate parar a ~3.5 studs dele. Chicken droppada/clique continua sem follow.
 - database.json atualizado (misc/ovo_verde_01 e misc/galinha_verde_01: makeFollow).
+
+## 2026-08-11 (sessao incubadora v6 - animacao de andar + solta segue)
+- ANIMACAO DE ANDAR procedural (mesh IA unica, sem esqueleto p/ animacoes R15): makeFollow agora
+  tick 0.05s, hop vertical |sin(t*9)|*0.22 + balanceio tilt sin(t*9)*0.07 enquanto corre a 8 studs/s;
+  parada = respiracao suave sin(t*4)*0.04; vira sempre p/ o jogador.
+- GALINHA SOLTA DA TOOL TAMBEM SEGUE: makeTool.Activated -> Module.spawnChicken(pos, player)
+  (antes spawnava sem follow); pegou a tool e soltou no playtest: a solta seguiu o jogador.
+- CORRECOES DE FOLLOW no mapa (tem montanhas/picos gigantes ate y~378): (a) Anchored=true +
+  CanCollide=false fixados no makeFollow -> imune a fisica; (b) altura da galinha = pe do jogador
+  (root.Y-1.7), SEM raycast no XZ do jogador (subia picos que nao eram dele) e SEM subir o terreno
+  do caminho (escalava montanha inteira). Agora atravessa picos que nao estao sob o jogador.
+- Testado no playtest 2026-08-11: fluxo completo (ovo->Incubar E->20s->Abrir E->galinha nasce e
+  segue com hop visivel, Y oscilando 1.63-1.82 durante a corrida); tool drop segue; altura do pe
+  correta (char root 3.3 -> galinha y~1.6).
+- database.json atualizado (misc/ovo_verde_01 e misc/galinha_verde_01: animacao de andar + solta segue).
