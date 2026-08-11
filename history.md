@@ -323,4 +323,26 @@
 - Lembrete ao usuario: salvar o lugar (Ctrl+S) para persistir mesh+textura embutidas no .rbxl.
 - database.json atualizado (GenerateTextures=true, TextureContent embutida, bounds [2,3,3]).
 
+## 2026-08-11 (sessao Place1 - galinha VISIVEL NO PLAY via geracao no servidor)
+- Usuario: "ainda n da pra ver no play". CAUSA RAIZ descoberta: GenerationService no DM do EDIT
+  cria MeshContent/TextureContent EMBUTIDOS (conteudo editavel local) que NAO replicam p/ o runtime.
+  Prova: no playtest o body_geom tinha MeshContent=None (invisivel), apesar do raycast bater
+  (colisao) e do EDIT renderizar (TextureContent=Opaque). Export .rbxm (edit E servidor) tambem
+  perde o conteudo (42KB, reimport mesh=None).
+- EXPERIMENTO DEFINITIVO: geracao DIRETA no servidor de um MULTIPLAYER playtest (cliente em
+  processo separado) -> cliente ve mesh=Content{Opaque} tex=Content{Opaque} + raycast bate.
+  Conclusao: gerar no servidor produz conteudo REAL que replica/renderiza de verdade.
+- FIX: GalinhaVerdeScript reescrito p/ gerar a galinha no SERVIDOR a cada inicio de sessao:
+  GenerateModelAsync (TextPrompt detalhado, Size 2.5x3.5x3, MaxTriangles=20000, GenerateTextures=true)
+  com retry (6 tentativas/5s), ScaleTo(1.6) ~1.95x3.01x3.07, template no ServerStorage, spawn em
+  Workspace (6,1.5,2) anc=true, ProximityPrompt PegarGalinha (E, dist 8). Mesma mecanica de pega/
+  dropa (tool com Handle=MeshPart; clique respawna template com prompt re-conectado).
+- Removida do edit a galinha estatica (conteudo embutido) — agora so existe a gerada no servidor.
+- Testado no playtest: gerada apos ~1s, cliente ve mesh+tex Opaque, pega (tool no backpack),
+  dropa (galinha com mesh+tex no workspace + prompt). Ciclo completo OK.
+- TRADEOFF: 1 geracao por sessao/servidor (rate limit; ~1-30s ate aparecer); NAO visivel no DM
+  do edit (so no play/published). Unica via funcional sem credenciais de upload (Open Cloud).
+- database.json atualizado (misc/galinha_verde_01: geracao no servidor, conteudo real replicante).
+
+
 
