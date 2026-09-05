@@ -608,3 +608,18 @@
 - Pendente: confirmar visualmente com o usuario se o cinza sumiu; se persistir, perguntar
   QUAL parte fica cinza.
 - database.json atualizado (misc/galinha_lowpoly_03: FIX 7). Commit + push.
+
+## 2026-09-05 (sessao galinha low poly - asaD empilhada / espelhamento Y)
+- Usuario: "esta ainda, com a textura estranha" (indicou depois: 'e a asa direita agr').
+- CAUSA REAL encontrada: no script de espelhamento da asa direita eu tinha descartado o
+  componente Y (up). Resultado: AsaD2 ficou EXATAMENTE SOBRE a AsaD1 (empilhadas) -> a parte
+  sobreposta criava a aparencia de textura estranha/cinza na asa.
+- FIX 8: espelhamento completo - dPos = hub + fwd*cx + up*cy - right*cz (cx,cy,cz decompostos
+  de rel na base fwd/up/right), orientacao espelhada em 3 colunas (RightVector/UpVector/
+  LookVector). Welds recriados.
+- Estado final: hub=(2.62,1.97,-69.52), fwd=-(0,0,1); E1(1.89,2.22,-69.52)/D1(3.35,2.22,-69.52);
+  E2(1.89,1.77,-69.52)/D2(3.35,1.77,-69.52) - simetricas, Y preservado, separadas. 30 partes, 29 welds.
+- Obs: usuario continua movendo o modelo no Studio entre mensagens; sempre ler posicoes ao vivo.
+- Pendente: confirmar visualmente; se persistir, usuario deve SELECIONAR a parte cinza no Studio
+  para eu identificar via selection get.
+- database.json atualizado (misc/galinha_lowpoly_03: FIX 8). Commit + push.
