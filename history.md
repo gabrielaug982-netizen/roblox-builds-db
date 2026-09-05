@@ -533,3 +533,14 @@
   (ancorado, vira PrimaryPart) — arrastar/mover o modelo não desprende mais nada.
   Mesma tecnica usada no LabCidade (2026-08-09).
 - database.json atualizado (misc/galinha_lowpoly_03). Commit + push.
+
+## 2026-09-05 (sessao galinha low poly - asas p/ a lateral FINAL)
+- Usuario: "nao ficou certo" (apos o fix anterior). Perguntado; resposta: 'Posicao errada'.
+- Causa: asas estavam nas posicoes de FRENTE/TRAS (eixo Z) mas a galinha 'olha' p/ o eixo Z
+  (bico em +Z relativo ao corpo) -> asas deveriam estar na LATERAL (eixo X, esquerda/direita).
+- FIX: AsaE1/D1 sz (0.18,0.55,0.66) e AsaE2/D2 (0.18,0.40,0.58) posicionadas em
+  X = corpo +-0.545 (fina na lateral, comprida ao longo do corpo eixo Z), Z = centro do corpo,
+  sem rotacao; welds recriados (29 no total).
+- Obs: usuario continua movendo o modelo no Studio (corpo chegou em -1.62,1.97,-67.21);
+  soldas mantem tudo junto.
+- database.json atualizado (misc/galinha_lowpoly_03: FIX 2 final). Commit + push.
