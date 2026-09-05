@@ -445,3 +445,10 @@
   MaxDistance 20); fluxo completo ovo->Incubar->20s->Abrir->galinha 'Galinha Mutante' nasce e segue
   sem o E pega-la; mensagem so com ovo segurando perto (oculta sem ovo e longe).
 - database.json atualizado (misc/ovo_verde_01 e misc/galinha_verde_01: nome/tag + mensagem so com ovo).
+
+## 2026-09-05 (sessao galinha nova)
+- Usuario: "crie uma galinha no roblox". Studio lancado (baseplate) e galinha gerada por IA via
+  `generate_model` (GenerationService Body1, 1 MeshPart 1.25x1.92x1.68, ~anima cowboy com textura:
+  corpo branco, crista/barbela vermelhas, bico e pernas laranjas).
+- Posicionada em `Workspace.Galinha` (0,3,0), ancorada. Nome do modelo "Galinha".
+- Registrado em localBuilds `misc/galinha_01` no database.json; meta.lastUpdated = 2026-09-05.
