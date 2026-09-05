@@ -452,3 +452,15 @@
   corpo branco, crista/barbela vermelhas, bico e pernas laranjas).
 - Posicionada em `Workspace.Galinha` (0,3,0), ancorada. Nome do modelo "Galinha".
 - Registrado em localBuilds `misc/galinha_01` no database.json; meta.lastUpdated = 2026-09-05.
+
+## 2026-09-05 (sessao galinha de partes)
+- Usuario: "esta legal, agora deixe ela e crie outra sem modelo 3d". A galinha IA (Galinha) ficou.
+- Criada `Workspace['Galinha Partes']`: galinha feita SO de Parts (sem mesh/modelo 3D gerado),
+  18 pecas SmoothPlastic (corpo/cabeca Ball amarelos, crista/barbela vermelhas, bico laranja,
+  olhos pretos, asas, 3 penas de cauda, 2 pernas cilindro + pezinhos). Anc<, escala 0.62
+  (bounds 1.2x1.9x1.0, altura igual a da galinha IA).
+- Erros corrigidos ao longo do caminho: Enum.Shape nao existe (usar Enum.PartType); SetName nao e
+  membro valido no runtime do MCP (usar p.Name=...); duplicatas de modelos parciais (0/1/18 partes)
+  das tentativas que abortaram foram limpas (mantida a de 18).
+- Pede confirmacao visual ao usuario (screenshot nao verificavel por este modelo de IA).
+- Registrado em localBuilds `misc/galinha_partes_01` no database.json; commit + push.
