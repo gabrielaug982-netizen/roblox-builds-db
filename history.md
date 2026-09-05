@@ -473,3 +473,15 @@
   1.59x1.90x1.34 (altura 1.90 igual as outras galinhas).
 - Screenshot nao verificavel por este modelo de IA; pedir confirmacao visual ao usuario.
 - Registrado em localBuilds `misc/galinha_lowpoly_01`; commit + push.
+
+## 2026-09-05 (sessao galinha low poly v2 - branca e detalhada)
+- Usuario: "faltou mais detalhes quadrado e estrutura, e ser branca".
+- Reconstruida `Workspace['Galinha Low Poly']` (v1 amarela destruida): galinha BRANCA com muito
+  mais estrutura quadrada, 28 Parts SmoothPlastic: corpo em CAMADAS quadradas (Barriga 1.6x0.7x1.15,
+  CostasMeio, CostasTopo, Peito), Pescoco+Cabeca Block, olhos cubos pretos, BICO em 2 cubos degrau
+  laranjas (Bico1/Bico2), Barbela vermelha inclinada, CRISTA 3 cubos vermelhos em degrau, ASAS em
+  placas empilhadas (2 camadas por lado), CAUDA 4 penas quadradas empilhadas p/ tras, PERNAS
+  segmentadas (2 cubos cada) + pes laranjas.
+- Escala 0.62 (pivo 10,0,0) -> bounds 1.49x1.90x1.07 (altura 1.90, igual as outras galinhas).
+- Screenshot nao verificavel por este modelo de IA; pedir confirmacao visual ao usuario.
+- Registrado em localBuilds `misc/galinha_lowpoly_02` (substitui o _01); commit + push.
