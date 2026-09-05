@@ -504,3 +504,12 @@
 - `Workspace['Galinha Low Poly']` RESTAURADA ao estado v2 (28 partes quadradas branco + detalhes,
   crista 3 cubos) e re-escalada (0.62, bounds 1.49x1.90x1.07). Registro do banco atualizado
   (misc/galinha_lowpoly_03 agora descreve o estado RESTAURADO v2). Commit + push.
+
+## 2026-09-05 (sessao galinha low poly - asas maiores e ajustadas)
+- Usuario: "ajuste as asas, maiores e arrumadas no corpo".
+- Asas do `Workspace['Galinha Low Poly']` (v2 restaurada) ampliadas e encaixadas na lateral do
+  corpo (z +-0.47): AsaE1/D1 principal 0.68x0.55x0.18 em (9.66,0.95,+-0.47) inclinada 18 graus;
+  AsaE2/D2 inferior 0.60x0.40x0.18 em (9.74,0.62,+-0.47) inclinada 14 graus (asa de 2 placas
+  sobrepostas). Substituiu as placas antigas 0.37x0.34.
+- Obs: Studio minimizado durante a sessao (screenshot indisponivel); confirmar visualmente.
+- database.json atualizado (misc/galinha_lowpoly_03: notas das asas). Commit + push.
