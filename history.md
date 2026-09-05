@@ -657,3 +657,17 @@
   identica (fwd=(0,-0.28,-0.96), up=(0,0.96,-0.28)); E=(7.54,2.09,-67.21) D=(9.22,2.09,-67.21)
   hub=(8.38,1.97,-67.21) fwd=(0,0,-1). Superficies do corpo simetricas (0.62); welds ok.
 - database.json atualizado (misc/galinha_lowpoly_03: FIX 11). Commit + push.
+
+## 2026-09-05 (sessao galinha low poly - restauracao da estrutura + reagrupamento)
+- Usuario: "ajuste a estrutura agora, acabei tirando sem querer".
+- O que tinha acontecido: AsaE1 APAGADA, AsaD1 DUPLICADA, hub CostasMeio arrastado p/ fora do
+  corpo (11.52,1.28), e depois o corpo inteiro movido deixando o hub p/ tras.
+- FIX 12: hub recolocado na vertebra do corpo (interpolacao Barriga/CostasTopo na altura e
+  PernaE1/PernaD1 no X; Bico2/CaudaTopo no Z) => (2.10,3.56,-67.03). AsaE1 recriada; AsaD1
+  duplicada removida; todas as partes (25 corpo) re-soldadas via WeldConstraint ao hub; asas
+  recriadas simetricas (E=(1.26,3.68,-67.03) D=(2.94,3.68,-67.03), orientacao fwd=(0,-0.28,-0.96)
+  out=+-X). TUDO RE-AGRUPADO em Model 'Galinha Low Poly' com PrimaryPart=CostasMeio ANCORADO ->
+  mover/arrastar a galinha como um todo nao desmonta mais.
+- Estado: 28 partes, 27 welds, sem duplicatas, bounds 1.92x2.44x(rot). Galinha esta flutuando
+  acima do chao (partes digitais movidas pelo usuario) - oferecido colocar os pés no chao.
+- database.json atualizado (misc/galinha_lowpoly_03: FIX 12). Commit + push.
