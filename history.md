@@ -569,3 +569,14 @@
   (-1.62,1.97,-67.21).
 - Screenshot indisponivel (modelo IA); confirmar visualmente com o usuario.
 - database.json atualizado (misc/galinha_lowpoly_03: FIX 4). Commit + push.
+
+## 2026-09-05 (sessao galinha low poly - asas na lateral correta)
+- Usuario: "vc botou na frente e atras, nao nos lados".
+- O FIX 4 usava o eixo X local do hub como lateral, mas no DESIGN v2 a lateral da galinha e o
+  eixo Z (olhos e asas originais em +-Z; o corpo e' comprido no eixo X = frente/tras).
+- FIX: asas agora em offsets LOCAIS Z do corpo: p.CFrame = hub.CFrame * CFrame.new(0, dy, +-zOff),
+  com zOff = hub.Size.Z/2 + 0.20 (projecao p/ fora). Asas finas no Z (0.2) e longas no X (0.72)
+  = acompanham o corpo. E alta/frente (ori z14), D baixa/tras (ori z-9); welds recriados.
+- Verificado em runtime (2026-09-05): asas separadas na lateral junto aos olhos (E -2.30, D -0.94),
+  bico p/ frente (Z -67.96), corpo -1.62,1.97,-67.21. 30 partes, 29 welds, bounds [2.02,2.44,1.12].
+- database.json atualizado (misc/galinha_lowpoly_03: FIX 5). Commit + push.
