@@ -544,3 +544,16 @@
 - Obs: usuario continua movendo o modelo no Studio (corpo chegou em -1.62,1.97,-67.21);
   soldas mantem tudo junto.
 - database.json atualizado (misc/galinha_lowpoly_03: FIX 2 final). Commit + push.
+
+## 2026-09-05 (sessao galinha low poly - asas ASSIMETRICAS)
+- Usuario: "arrumou nao, ajuste as asas assimetricamente no corpo da galinha".
+- Causa do erro persistente: com as asas finas (0.18/0.20 no eixo X) e coladas na superficie,
+  ficavam quase invisiveis/enterradas no corpo.
+- FIX: asas ASSIMETRICAS projetando +0.20 studs p/ fora (xOff = CostasMeio.Size.X/2 + 0.20,
+  medido em runtime = halfW 0.62):
+  - AsaE (esquerda): ALTA, inclinada e p/ FRENTE - E1 sz(0.20,0.62,0.72) corpo+(-0.82,0.24,-0.16)
+    ori z14; E2 sz(0.20,0.42,0.56) ori z9.
+  - AsaD (direita): BAIXA, relaxada e p/ TRAS - D1 sz(0.20,0.62,0.72) corpo+(0.82,0.0,0.16) ori z-9;
+    D2 sz(0.20,0.42,0.56) ori z-5.
+- Welds recriados (29). Screenshot indisponivel (modelo IA); confirmar visualmente.
+- database.json atualizado (misc/galinha_lowpoly_03: FIX 3). Commit + push.
