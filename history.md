@@ -464,3 +464,12 @@
   das tentativas que abortaram foram limpas (mantida a de 18).
 - Pede confirmacao visual ao usuario (screenshot nao verificavel por este modelo de IA).
 - Registrado em localBuilds `misc/galinha_partes_01` no database.json; commit + push.
+
+## 2026-09-05 (sessao galinha low poly)
+- Usuario: "faz uma low poly chicken". Criada `Workspace['Galinha Low Poly']`: galinha LOW POLY
+  angular (15 Parts SmoothPlastic, sem mesh): Corpo+Cabeca Block amarelos, Bico Wedge laranja,
+  Crista 2 blocos vermelhos inclinados, Barbela vermelha, olhos pretos, Cauda CornerWedge,
+  asas finas anguladas, 2 pernas + pes laranjas. Escala 0.83 (pivo 10,0,0) -> bounds
+  1.59x1.90x1.34 (altura 1.90 igual as outras galinhas).
+- Screenshot nao verificavel por este modelo de IA; pedir confirmacao visual ao usuario.
+- Registrado em localBuilds `misc/galinha_lowpoly_01`; commit + push.
