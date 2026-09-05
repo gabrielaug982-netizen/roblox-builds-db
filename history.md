@@ -644,3 +644,16 @@
   fwd=(0,0,-1); D=(2.04,2.09,-69.52) E=(0.00,2.09,-69.52) simetricas; 28 partes, 27 welds,
   bounds [1.92,2.44,2.39].
 - database.json atualizado (misc/galinha_lowpoly_03: FIX 10). Commit + push.
+
+## 2026-09-05 (sessao galinha low poly - desagrupamento + inclinacao identica das asas)
+- Usuario: "é a asaE1" (ainda com aparencia estranha).
+- DESCOBERTA: o modelo 'Galinha Low Poly' FOI DESAGRUPADO no Studio - as partes agora estao
+  soltas direto no Workspace (scripts antigos que procuravam o Model falhavam). Superficie do
+  corpo p/ posicionar asas tambem foi puxada pela laje verde gigante 'Part' (73x84) - fix: filtra
+  dimensao > 8 e nomes baseplate/spawn.
+- CAUSA do 'uma ainda esta': as asas eram ESPELHADAS (E varria p/ tras, D p/ frente); dependendo
+  do angulo a E1 parecia dobrada/camuflada. 
+- FIX: as DUAS asas agora com a MESMA inclinacao p/ tras (Angles(0,0,6)), orientacao mundial
+  identica (fwd=(0,-0.28,-0.96), up=(0,0.96,-0.28)); E=(7.54,2.09,-67.21) D=(9.22,2.09,-67.21)
+  hub=(8.38,1.97,-67.21) fwd=(0,0,-1). Superficies do corpo simetricas (0.62); welds ok.
+- database.json atualizado (misc/galinha_lowpoly_03: FIX 11). Commit + push.
