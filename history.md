@@ -623,3 +623,11 @@
 - Pendente: confirmar visualmente; se persistir, usuario deve SELECIONAR a parte cinza no Studio
   para eu identificar via selection get.
 - database.json atualizado (misc/galinha_lowpoly_03: FIX 8). Commit + push.
+
+## 2026-09-05 (sessao galinha low poly - asas Plastic fosco)
+- Usuario: "as duas estão agora" (duas asas com aparencia estranha/cinza).
+- Usuario selecionou um 'Part' verde solto no chao (-14,0.5,-79.5) que NAO e' a asa - irrelevante.
+- Decisao do usuario via 'Trocar material': asas E1/E2/D1/D2 trocadas de SmoothPlastic para
+  Plastic (fosco, sem especular), Reflectance=0 — elimina o brilho/variacao que parecia
+  'textura estranha/cinza' nas placas finas. Cor mantida 0.93.
+- database.json atualizado (misc/galinha_lowpoly_03: FIX 9). Commit + push.
