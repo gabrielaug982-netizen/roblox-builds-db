@@ -557,3 +557,15 @@
     D2 sz(0.20,0.42,0.56) ori z-5.
 - Welds recriados (29). Screenshot indisponivel (modelo IA); confirmar visualmente.
 - database.json atualizado (misc/galinha_lowpoly_03: FIX 3). Commit + push.
+
+## 2026-09-05 (sessao galinha low poly - asas em eixos locais)
+- Usuario: "voce provavelmente adicionou errado pq a galinha mudou de angulo".
+- CAUSA RAIZ: o corpo estava ROTACIONADO ~90 graus em Y (hub euler 0,90,0). O FIX 3 usava
+  offsets em EIXO DE MUNDO (X) -> com a galinha rotacionada, as asas saiam do lugar.
+- FIX: asas agora aplicadas em EIXOS LOCAIS DO CORPO: p.CFrame = hub.CFrame * CFrame.new(offLocal)
+  * CFrame.Angles(...) (offLocal +-xOff eixo local X do corpo, xOff = Size.X/2 + 0.20). Valem
+  em QUALQUER angulo/rotacao. Projecao +0.20; E alta/frente ori z14, D baixa/tras ori z-9.
+- Estado final em 2026-09-05: 30 partes, 29 welds, bounds [2.02,2.44,1.12], corpo em
+  (-1.62,1.97,-67.21).
+- Screenshot indisponivel (modelo IA); confirmar visualmente com o usuario.
+- database.json atualizado (misc/galinha_lowpoly_03: FIX 4). Commit + push.
