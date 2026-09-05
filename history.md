@@ -631,3 +631,16 @@
   Plastic (fosco, sem especular), Reflectance=0 — elimina o brilho/variacao que parecia
   'textura estranha/cinza' nas placas finas. Cor mantida 0.93.
 - database.json atualizado (misc/galinha_lowpoly_03: FIX 9). Commit + push.
+
+## 2026-09-05 (sessao galinha low poly - asas placa unica grossa, sem transparencia)
+- Usuario: "elas estão meio transparentes" (as asas).
+- Causa: placas finas (0.2) DUPLAS empilhadas (principal+secundaria) geravam bordas/aspecto
+  de transparencia.
+- FIX 10: reconstruiu as asas como PLACA UNICA GROSSA por lado (0.7 x 0.55 x 0.35), Plastic,
+  Transparency=0. Raiz na SUPERFICIE REAL do tronco: offsetMag = |surf - hub.Dot(right)| medido
+  em runtime sobre todas as partes (excl. asas), +0.22 p/ fora +0.12 p/ cima. AsaE2/AsaD2
+  REMOVIDAS (elimina empilhamento). Posicionou as DUAS asas numa unica chamada (modelo gira
+  entre chamadas -> atomicidade evita dessincronizacao). Estado 2026-09-05: hub=(1.02,1.97,-69.52)
+  fwd=(0,0,-1); D=(2.04,2.09,-69.52) E=(0.00,2.09,-69.52) simetricas; 28 partes, 27 welds,
+  bounds [1.92,2.44,2.39].
+- database.json atualizado (misc/galinha_lowpoly_03: FIX 10). Commit + push.
