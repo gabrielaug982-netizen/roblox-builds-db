@@ -593,3 +593,18 @@
   / D1 (-0.02,2.19,-71.21); E2/D2 y=1.85 mesmos Z; olhos tb simetricos. 30 partes, 29 welds,
   bounds [1.92,2.44,1.40].
 - database.json atualizado (misc/galinha_lowpoly_03: FIX 6). Commit + push.
+
+## 2026-09-05 (sessao galinha low poly - asas uniformes / sem cinza)
+- Usuario: "a textura do lado esquerdo ficou diferente e cinza".
+- Inspecao: todos os materiais/cor identicos (SmoothPlastic branco 0.93; nenhuma parte cinza).
+  Diagnostico: orientacao das asas (face interna de um lado) + asa muito colada podendo
+  intersectar o corpo (clipping) -> aparencia cinza/diferente.
+- FIX: asas reconstruidas com CFrame.fromMatrix(pos, fwd, up, OUTWARD) -> a face externa
+  aponta p/ fora NOS DOIS LADOS (iluminacao uniforme); protrusao maior halfLat+0.25.
+  Tamanhos (0.72,0.5,0.2) asa principal / (0.5,0.34,0.2) secundaria; dy superiores +0.25,
+  inferiores -0.2 simetricos. Welds recriados.
+- Verificado 2026-09-05: asas E/D espelhadas no centro (mesmo X/Y, lados opostos),
+  olhos tb simetricos. 30 partes, 29 welds, bounds [1.92,2.44,1.66].
+- Pendente: confirmar visualmente com o usuario se o cinza sumiu; se persistir, perguntar
+  QUAL parte fica cinza.
+- database.json atualizado (misc/galinha_lowpoly_03: FIX 7). Commit + push.
