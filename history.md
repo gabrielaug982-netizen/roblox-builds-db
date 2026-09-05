@@ -522,3 +522,14 @@
 - Obs: o usuario reposicionou o modelo no Studio (ago ~x5,z12.9); brilhos posicionados a partir
   da posicao atual dos olhos, ok.
 - database.json atualizado (misc/galinha_lowpoly_03: olhos com brilho). Commit + push.
+
+## 2026-09-05 (sessao galinha low poly - asas desprenderam ao mover)
+- Usuario: "as asas nao estao no corpo". Causa: o modelo tinha sido MOVIDO no Studio
+  (corpo agora em x-4.66,z-70.49) e as asas (e olhos com brilho) ficaram para tras — gap de
+  ~4 studs em X e ~12 em Z (asas em x-0.18,z-82 vs corpo x-4.66,z-70.49).
+- FIX 1: asas reposicionadas sobre o corpo (encaixadas na lateral, z +-0.47 do centro do corpo):
+  AsaE1/D1 (-5.00,2.16,+-0.47) AsaE2/D2 (-4.92,1.83,+-0.47).
+- FIX 2 (preventivo): TODAS as 29 partes soldadas via WeldConstraint ao hub CostasMeio
+  (ancorado, vira PrimaryPart) — arrastar/mover o modelo não desprende mais nada.
+  Mesma tecnica usada no LabCidade (2026-08-09).
+- database.json atualizado (misc/galinha_lowpoly_03). Commit + push.
