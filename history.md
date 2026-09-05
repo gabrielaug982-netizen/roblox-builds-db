@@ -671,3 +671,15 @@
 - Estado: 28 partes, 27 welds, sem duplicatas, bounds 1.92x2.44x(rot). Galinha esta flutuando
   acima do chao (partes digitais movidas pelo usuario) - oferecido colocar os pés no chao.
 - database.json atualizado (misc/galinha_lowpoly_03: FIX 12). Commit + push.
+
+## 2026-09-05 (sessao galinha low poly - re-sincronizacao corpo x hub)
+- Usuario: "vc so agrupou, falta partes separadas".
+- Diagnostico: usuario arrastou partes INDIVIDUAIS do corpo no modo edicao; o STudio nao
+  propaga WeldConstraint em edicao, entao o corpo (cabeca/pernas/costas, x~-1.5) ficou separado
+  do hub+asas (x~2.1), tudo DENTRO do mesmo Model mas desconexo.
+- FIX 13: recalculou centro do corpo = (-1.04,4.45,-66.95); moveu o hub p/ la; re-soldou as 25
+  partes do corpo; recriou asas simetricas (-1.88,4.57) e (-0.20,4.57). Estado: 28 partes,
+  27 welds, todas coesas.
+- APRENDIZADO IMPORTANTE (repasse p/ usuario): mover sempre o Model 'Galinha Low Poly' INTEIRO
+  (pelo Explorer) ou o hub; nunca partes individuais, senão desmonta.
+- database.json atualizado (misc/galinha_lowpoly_03: FIX 13). Commit + push.
