@@ -580,3 +580,16 @@
 - Verificado em runtime (2026-09-05): asas separadas na lateral junto aos olhos (E -2.30, D -0.94),
   bico p/ frente (Z -67.96), corpo -1.62,1.97,-67.21. 30 partes, 29 welds, bounds [2.02,2.44,1.12].
 - database.json atualizado (misc/galinha_lowpoly_03: FIX 5). Commit + push.
+
+## 2026-09-05 (sessao galinha low poly - asas simetricas na lateral)
+- Usuario: "as asas nao estao posicionadas no corpo direito e nem simetricas".
+- FIX: reposicionou asas com SIMETRIA EXATA e INDEPENDENTE de eixos/rotacao:
+  - Frente = direcao da geometria (Bico1.Position - hub.Position), horizontal.
+  - Lateral (right) = perpendicular no XZ: (-fwd.Z, 0, fwd.X).
+  - Pos = hub + right*side*(halfLat+0.12) + (0,dy,0), halfLat = min(Size.X,Size.Z)/2 do hub.
+  - dy SIMETRICO: asa principal +0.22, asa secundaria -0.12 (iguais dos dois lados).
+  - CFrame = CFrame.fromMatrix(pos, fwd, up, -outward) sem tilt; weld no hub.
+- Resultado verificado em runtime: espelhadas no centro do corpo (X=-0.62); E1 (-1.22,2.19,-71.21)
+  / D1 (-0.02,2.19,-71.21); E2/D2 y=1.85 mesmos Z; olhos tb simetricos. 30 partes, 29 welds,
+  bounds [1.92,2.44,1.40].
+- database.json atualizado (misc/galinha_lowpoly_03: FIX 6). Commit + push.
