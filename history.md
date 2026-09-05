@@ -485,3 +485,22 @@
 - Escala 0.62 (pivo 10,0,0) -> bounds 1.49x1.90x1.07 (altura 1.90, igual as outras galinhas).
 - Screenshot nao verificavel por este modelo de IA; pedir confirmacao visual ao usuario.
 - Registrado em localBuilds `misc/galinha_lowpoly_02` (substitui o _01); commit + push.
+
+## 2026-09-05 (sessao galinha low poly v3 - crista melhorada + menos bloco)
+- Usuario: "melhore a crista e faça ela ficar com aspecto menor de um bloco".
+- Reconstruida `Workspace['Galinha Low Poly']` (v2 destruida), 23 Parts brancas:
+  - CRISTA MELHORADA: 6 bumps vermelhos (Ball) em semi-circulo ao longo do topo da cabeca
+    (Crista1..6), estilo crista real de galinha (antes eram 3 cubos degrau).
+  - Menos 'bloco': Corpo/Peito/Cabeca em Ball arredondado, Pescoco cilindrico, pernas cilindro
+    laranja, asas Ball finas rotacionadas (15/-15 graus), cauda 3 penas Ball inclinadas (55/65,
+    graus), bico Wedge laranja alongado, barbela Ball vermelha inclinada, olhos pretos.
+- Escala 0.66 (pivo 10,0,0) -> bounds 1.42x1.90x0.88 (altura 1.90 igual as outras galinhas).
+- Screenshot nao verificavel por este modelo de IA; pedir confirmacao visual ao usuario.
+- Registrado em localBuilds `misc/galinha_lowpoly_03` (substitui o _02); commit + push.
+
+## 2026-09-05 (sessao galinha low poly - REVERT p/ v2)
+- Usuario: "nao aquele projeto anterior estava bem melhor" -> a v3 arredondada (23 partes, crista
+  bump, menos bloco) foi REJEITADA.
+- `Workspace['Galinha Low Poly']` RESTAURADA ao estado v2 (28 partes quadradas branco + detalhes,
+  crista 3 cubos) e re-escalada (0.62, bounds 1.49x1.90x1.07). Registro do banco atualizado
+  (misc/galinha_lowpoly_03 agora descreve o estado RESTAURADO v2). Commit + push.
