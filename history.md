@@ -513,3 +513,12 @@
   sobrepostas). Substituiu as placas antigas 0.37x0.34.
 - Obs: Studio minimizado durante a sessao (screenshot indisponivel); confirmar visualmente.
 - database.json atualizado (misc/galinha_lowpoly_03: notas das asas). Commit + push.
+
+## 2026-09-05 (sessao galinha low poly - brilho nos olhos)
+- Usuario: "agora adicione brilhos nos olhos".
+- Olhos do `Workspace['Galinha Low Poly']` com brilho: material mudado p/ Glass (brilhante) +
+  pontinho branco especular adicionado em cada olho (BrilhoOlhoEsquerdo/Direito, Ball 0.05,
+  SmoothPlastic branco 255,255,255) no canto frontal-superior (offset +0.03x,+0.028y,+0.03z).
+- Obs: o usuario reposicionou o modelo no Studio (ago ~x5,z12.9); brilhos posicionados a partir
+  da posicao atual dos olhos, ok.
+- database.json atualizado (misc/galinha_lowpoly_03: olhos com brilho). Commit + push.
