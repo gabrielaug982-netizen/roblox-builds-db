@@ -727,3 +727,10 @@
   bolinhas re vermelhas; barbela bolinha; olhos Ball preto + brilho; asas 2 bolas elipsoides/lado; cauda
   3 bolas inclinadas; pernas cilindros + pes. Bounds 1.18x1.81x1.36.
 - database.json corrigido (JSON quebrado por aspas nao escapadas, reparado com \u0022). Commit + push.
+
+## 2026-09-05 (sessao galinha quadrada de novo)
+- Usuario pediu "quero quadrado" apos testar a redonda (07).
+- Nova: misc/galinha_lowpoly_08 = reconstrucao da versao quadrada limpa (06): 29 Parts SmoothPlastic
+  brancas + 28 welds ao hub CostasMeio, pos (4,4) em shadowhu2384, piso y0. Pescoco 2 segmentos;
+  corpo 4 camadas; asas 3 camadas/lado; cauda 3 penas; crista 2 cubos. Bounds 1.33x2.2x1.64.
+- database.json corrigido (aspas nao escapadas reparadas com \u0022). Commit + push.
