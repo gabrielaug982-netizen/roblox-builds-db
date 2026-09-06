@@ -798,3 +798,8 @@
 - Usuario: "faca outra". Anterior (v18) substituida.
 - Nova: misc/galinha_lowpoly_19, 25 Parts CHIBI compacta (corpo 0.95x0.6x0.7 baixo, pescoco curto, cabeca grande 0.48, pernas curtas). Pos (4,4), piso y0. Bounds 1.22x1.74x1.16.
 - database.json atualizado. Commit + push.
+
+## 2026-09-05 (galinha substituir)
+- Usuario: "substituir" (outra no mapa). Chibi v19 substituida.
+- Nova: misc/galinha_lowpoly_20, 26 Parts quadrada adulta (Barriga 1.2x0.6x0.8), pescoco 2 blocos, crist a 2 cubos, pernas fora (x=+-0.54). Pos (4,4), piso y0. Bounds 1.47x2.15x1.35.
+- database.json atualizado. Commit + push.
