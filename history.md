@@ -712,3 +712,10 @@
   Pescoço em 2 segmentos + garganta inclinada (bem visivel); corpo em 6 camadas; asas 3 camadas + pena frontal
   por lado; cauda 5 penas; pernas segmentadas. Bounds 1.48x2.37x1.86. Assentada no chao (piso y0).
 - database.json atualizado. Commit + push.
+
+## 2026-09-05 (sessao galinha versao limpa)
+- Usuario apontou "muitos quadrados desnecessarios" na galinha de 39 partes (galinha_lowpoly_05). Apagada.
+- Nova: misc/galinha_lowpoly_06, 29 Parts quadradas brancas + 28 welds ao hub CostasMeio, pos (4,4) em
+  shadowhu2384. Pescoco 2 segmentos; corpo 4 camadas; asas 3 camadas sem pena frontal; cauda 3 penas;
+  crista 2 cubos; olhos Glass sem brilho; pernas segmentadas. Bounds 1.33x2.2x1.64, assente no chao.
+- database.json atualizado. Commit + push.
