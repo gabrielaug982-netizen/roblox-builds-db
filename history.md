@@ -740,3 +740,11 @@
   barriga (largura 1.0). Reconstruida como misc/galinha_lowpoly_09: pernas FORA do corpo (x+-0.55),
   mais grossas + pes largos. 29 partes, 28 welds, piso y0. Bounds 1.33x2.2x1.64.
 - database.json corrigido (aspas nao escapadas na v08 -> \u0022). Commit + push.
+
+## 2026-09-05 (sessao galinha nova rechonchuda)
+- Usuario: "nao gostei fa" e pediu para apagar as outras. Workspace tinha 33 itens de lixo desagrupado
+  (Model + restos de v05/v08/v09 soltos); tudo apagado, so ficou Terrain/Baseplate/SpawnLocation.
+- Nova: misc/galinha_lowpoly_10, 25 Parts quadradas brancas RECHONCHUDAS (corpo mais largo que alto) +
+  24 welds ao hub Barriga. Pescoco curto, cabeca proporcional, pernas laranja visiveis abaixo da barriga,
+  asas 2 camadas, cauda 3 penas, crista 2 cubos. Pos (4,4), piso y0. Bounds 1.5x1.57x1.42.
+- database.json atualizado. Commit + push.
