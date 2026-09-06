@@ -756,3 +756,12 @@
   CILINDRICAS laranja visiveis, asas 2 camadas, cauda 3 penas. Pos (4,4), piso y0.
   Bounds 1.45x1.77x1.48.
 - database.json atualizado. Commit + push.
+
+## 2026-09-05 (sessao galinha corpo de ovo)
+- Usuario reclamou do FORMATO DO CORPO. Anterior (v11) apagada.
+- Nova: misc/galinha_lowpoly_12, 25 Parts + 24 welds ao hub Corpo.
+  Corpo: CILINDRO DEITADO (eixo Z, raio 0.52, compr 1.5) + Peito Ball + Traseira Ball nas pontas
+  = silhueta de galinha de verdade. Cabeca bola, olhos bola preto, bico 2 blocos, crista 2 cubos,
+  asas 2 camadas, cauda 3 penas fan, pernas cilindros laranja visiveis. Pos (4,4), piso y0.
+  Bounds 1.4x2.15x1.95.
+- database.json atualizado. Commit + push.
