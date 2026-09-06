@@ -773,3 +773,10 @@
   asas 2 camadas, cauda 3 penas, PERNAS FORA do corpo (x=+-0.55) bem visiveis. Pos (4,4), piso y0.
   Bounds 1.46x2.01x1.35.
 - database.json atualizado. Commit + push.
+
+## 2026-09-05 (sessao galo quadrado - varicao)
+- Usuario: "faca outra varicao quadrada". Galinha v13 substituida.
+- Nova: misc/galinha_lowpoly_14, 30 Parts quadradas. GALO: crista 4 cubos alta, barbela grande,
+  cauda 5 penas em leque, pernas mais altas. Mesmo estilo quadrado, pose de galo.
+  Pos (4,4), piso y0. Bounds 1.39x2.14x1.38.
+- database.json atualizado. Commit + push.
