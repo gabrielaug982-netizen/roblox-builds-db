@@ -813,3 +813,8 @@
 - Usuario: "apague e faca um bem detalhado". Marrom v21 apagada.
 - Nova: misc/galinha_lowpoly_22, 46 Parts BEM DETALHADA (corpo 3 + pescoco 3 + cabeca + bico 2 + crist a 4 + barbela 2 + olhos 2 + brilhos 2 + asas 8 + cauda 5 + pernas 12 com dedos e esporas). Patas com 3 dedos. Pos (4,4), piso y0. Bounds 1.48x2.19x1.37.
 - database.json atualizado. Commit + push.
+
+## 2026-09-05 (galinha anatomia corrigida 56 Parts)
+- Usuario: "faca uma anatomia melhor". v22 (46 Parts) apagada.
+- Nova: misc/galinha_lowpoly_23, 56 Parts ANATOMIA CORRIGIDA (femur escondido sob penas x=+-0.30, nao pernas largas fora; pescoco em S; asas 3 segmentos + primarias; cauda pigostilo + rectrizes; patas com halux atras + unhas). Corpo: Barriga+PeitoQuilha+Dorso+Uropigio. Pos (4,4), piso y0. Bounds 1.29x2.24x1.34.
+- database.json atualizado. Commit + push.
