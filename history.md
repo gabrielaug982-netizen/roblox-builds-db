@@ -803,3 +803,8 @@
 - Usuario: "substituir" (outra no mapa). Chibi v19 substituida.
 - Nova: misc/galinha_lowpoly_20, 26 Parts quadrada adulta (Barriga 1.2x0.6x0.8), pescoco 2 blocos, crist a 2 cubos, pernas fora (x=+-0.54). Pos (4,4), piso y0. Bounds 1.47x2.15x1.35.
 - database.json atualizado. Commit + push.
+
+## 2026-09-05 (galinha modelo diferente - marrom)
+- Usuario: "apague essa e faca um modelo diferente". v20 apagada.
+- Nova: misc/galinha_lowpoly_21, 28 Parts GALINHA MARROM (cores totalmente diferentes: corpo marrom, peito creme, bico amarelo wedge, pontas asa creme, cauda wedge, pernas amarelas). Visual wedge nas caudas/bico. Pos (4,4), piso y0. Bounds 1.45x2.12x1.35.
+- database.json atualizado. Commit + push.
