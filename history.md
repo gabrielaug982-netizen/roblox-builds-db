@@ -734,3 +734,9 @@
   brancas + 28 welds ao hub CostasMeio, pos (4,4) em shadowhu2384, piso y0. Pescoco 2 segmentos;
   corpo 4 camadas; asas 3 camadas/lado; cauda 3 penas; crista 2 cubos. Bounds 1.33x2.2x1.64.
 - database.json corrigido (aspas nao escapadas reparadas com \u0022). Commit + push.
+
+## 2026-09-05 (sessao pernas da galinha visiveis)
+- Usuario: "ficou feio, nao da pra ver as pernas" na v08. Causa: coxa/canela em x+-0.22 DENTRO da
+  barriga (largura 1.0). Reconstruida como misc/galinha_lowpoly_09: pernas FORA do corpo (x+-0.55),
+  mais grossas + pes largos. 29 partes, 28 welds, piso y0. Bounds 1.33x2.2x1.64.
+- database.json corrigido (aspas nao escapadas na v08 -> \u0022). Commit + push.
