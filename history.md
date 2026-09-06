@@ -683,3 +683,12 @@
 - APRENDIZADO IMPORTANTE (repasse p/ usuario): mover sempre o Model 'Galinha Low Poly' INTEIRO
   (pelo Explorer) ou o hub; nunca partes individuais, senão desmonta.
 - database.json atualizado (misc/galinha_lowpoly_03: FIX 13). Commit + push.
+
+## 2026-09-05 (sessao galinha low poly no baseplate)
+- Usuario pediu "crie uma galinha low poly" em um baseplate novo (temp MCP). Tentado geracao por IA
+  (generate_model -> __MCPGeneratedModels.GalinhaLowPoly) mas o resultado foi um PLACEHOLDER VAZIO
+  (MeshPart sem MeshId, bloco cinza) - usuario relatou "n achei".
+- Solucao (padrao galinha_lowpoly_03): galinha LOW POLY branca montada por script Luau (28 Parts
+  SmoothPlastic ancoradas + WeldConstraint ao hub CostasMeio), Face +Z, em Workspace['Galinha Low Poly']
+  no chao (pivo y0). Bounds 1.26x1.78x1.51.
+- database.json atualizado (misc/galinha_lowpoly_04). Commit + push.
