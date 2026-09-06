@@ -818,3 +818,8 @@
 - Usuario: "faca uma anatomia melhor". v22 (46 Parts) apagada.
 - Nova: misc/galinha_lowpoly_23, 56 Parts ANATOMIA CORRIGIDA (femur escondido sob penas x=+-0.30, nao pernas largas fora; pescoco em S; asas 3 segmentos + primarias; cauda pigostilo + rectrizes; patas com halux atras + unhas). Corpo: Barriga+PeitoQuilha+Dorso+Uropigio. Pos (4,4), piso y0. Bounds 1.29x2.24x1.34.
 - database.json atualizado. Commit + push.
+
+## 2026-09-05 (limite de mapa com montanhas)
+- Usuario: "faca um limite de mapa com montanhas e etc". Galinha v23 mantida.
+- Novo: misc/limite_montanhas_01, 117 partes em Workspace.LimiteMontanhas: perimetro N/S (7 cada) + L/O (5 cada) + 4 cantos + 6 colinas internas. Cada montanha = Base Slate + Pico Wedge + Neve + BaseVerde Grass. h 35-65, w 50-82, cores cinza variadas. Envolve Baseplate 512 em x/z +-280. Camera overview 0,120,350.
+- database.json atualizado. Commit + push.
