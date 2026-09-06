@@ -748,3 +748,11 @@
   24 welds ao hub Barriga. Pescoco curto, cabeca proporcional, pernas laranja visiveis abaixo da barriga,
   asas 2 camadas, cauda 3 penas, crista 2 cubos. Pos (4,4), piso y0. Bounds 1.5x1.57x1.42.
 - database.json atualizado. Commit + push.
+
+## 2026-09-05 (sessao galinha estilizada olhando pra frente)
+- Usuario: "faca outro e apague dnv". Anterior (v10) apagada.
+- Nova: misc/galinha_lowpoly_11, 26 Parts quadradas brancas + 25 welds ao hub Corpo (bloco unico).
+  Pescoco e cabeca INCLINADOS (olhando pra frente), crista 3 cubos inclinados p/ tras, pernas
+  CILINDRICAS laranja visiveis, asas 2 camadas, cauda 3 penas. Pos (4,4), piso y0.
+  Bounds 1.45x1.77x1.48.
+- database.json atualizado. Commit + push.
