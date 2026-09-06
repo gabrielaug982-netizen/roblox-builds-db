@@ -793,3 +793,8 @@
 - Usuario pediu galinha low poly novamente. Tentou generate_model (IA) -> placeholder vazio (MeshId '''').
 - Fallback: misc/galinha_lowpoly_18, 26 Parts quadradas adulta em pe (corpo alongado), pescoco 2 blocos, crist a 2 cubos, pernas fora (x=+-0.52). Pos (4,4), piso y0. Bounds 1.42x2.07x1.32.
 - database.json atualizado. Commit + push.
+
+## 2026-09-05 (galinha chibi compacta)
+- Usuario: "faca outra". Anterior (v18) substituida.
+- Nova: misc/galinha_lowpoly_19, 25 Parts CHIBI compacta (corpo 0.95x0.6x0.7 baixo, pescoco curto, cabeca grande 0.48, pernas curtas). Pos (4,4), piso y0. Bounds 1.22x1.74x1.16.
+- database.json atualizado. Commit + push.
