@@ -692,3 +692,15 @@
   SmoothPlastic ancoradas + WeldConstraint ao hub CostasMeio), Face +Z, em Workspace['Galinha Low Poly']
   no chao (pivo y0). Bounds 1.26x1.78x1.51.
 - database.json atualizado (misc/galinha_lowpoly_04). Commit + push.
+
+## 2026-09-05 (sessao galinha no lugar do usuario)
+- Usuario disse que a galinha 28 partes ficou "estranha" e pediu reconstrucao.
+- Descoberta: o usuario tem DUAS janelas Studio (temp baseplate MCP + seu lugar "Lugar de
+  shadowhu2384: 09062026_1", placeId 85582967785702). O "ficou estranho" era no lugar dele.
+- Geracao por IA no edit (generate_model e GenerateModelAsync Body1) so entrega PLACEHOLDER
+  (MeshPart sem MeshId) - mesh real so vem do servidor em playtest (ver galinha_verde_01).
+- Solucao: Creator Store asset 17183525920 "Low Poly Chicken" (1 MeshPart mesh real, sem scripts,
+  verde). Ativada "Allow Loading Third Party Assets" (Usuario confirmou). Inserida no lugar do
+  usuario em (4,4), altura 1.9, ancorada.
+- 9582728364 (Low Poly Chicken, 35 parts) e 93227986701789 (White Hen com 3 scripts) shortlist nao usados.
+- database.json atualizado (creatorStore + misc/galinha_creatorstore_01 + lastSearch). Commit + push.
