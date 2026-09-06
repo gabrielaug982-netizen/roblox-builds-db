@@ -808,3 +808,8 @@
 - Usuario: "apague essa e faca um modelo diferente". v20 apagada.
 - Nova: misc/galinha_lowpoly_21, 28 Parts GALINHA MARROM (cores totalmente diferentes: corpo marrom, peito creme, bico amarelo wedge, pontas asa creme, cauda wedge, pernas amarelas). Visual wedge nas caudas/bico. Pos (4,4), piso y0. Bounds 1.45x2.12x1.35.
 - database.json atualizado. Commit + push.
+
+## 2026-09-05 (galinha bem detalhada 46 Parts)
+- Usuario: "apague e faca um bem detalhado". Marrom v21 apagada.
+- Nova: misc/galinha_lowpoly_22, 46 Parts BEM DETALHADA (corpo 3 + pescoco 3 + cabeca + bico 2 + crist a 4 + barbela 2 + olhos 2 + brilhos 2 + asas 8 + cauda 5 + pernas 12 com dedos e esporas). Patas com 3 dedos. Pos (4,4), piso y0. Bounds 1.48x2.19x1.37.
+- database.json atualizado. Commit + push.
