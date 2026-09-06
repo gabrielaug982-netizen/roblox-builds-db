@@ -788,3 +788,8 @@
   olhos grandes pretos, asinhas, cauda 3 peninhas, pes minusculos (sentado).
   Pos (4,4), piso y0. Bounds 0.7x1.07x0.95.
 - database.json atualizado. Commit + push.
+
+## 2026-09-05 (galinha low poly - fallback manual)
+- Usuario pediu galinha low poly novamente. Tentou generate_model (IA) -> placeholder vazio (MeshId '''').
+- Fallback: misc/galinha_lowpoly_18, 26 Parts quadradas adulta em pe (corpo alongado), pescoco 2 blocos, crist a 2 cubos, pernas fora (x=+-0.52). Pos (4,4), piso y0. Bounds 1.42x2.07x1.32.
+- database.json atualizado. Commit + push.
