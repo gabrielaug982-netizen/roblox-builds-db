@@ -765,3 +765,11 @@
   asas 2 camadas, cauda 3 penas fan, pernas cilindros laranja visiveis. Pos (4,4), piso y0.
   Bounds 1.4x2.15x1.95.
 - database.json atualizado. Commit + push.
+
+## 2026-09-05 (sessao VOLTA da galinha QUADRADA)
+- Usuario: "piorou e quero quadrada como ja avisado". De ovo (v12) apagada.
+- Nova: misc/galinha_lowpoly_13, 26 Parts quadradas brancas + 25 welds ao hub Barriga.
+  Design quadrado solicitado pelo usuario (igual v09): pescoco 2 blocos, cabeça bloco, crista 2 cubos,
+  asas 2 camadas, cauda 3 penas, PERNAS FORA do corpo (x=+-0.55) bem visiveis. Pos (4,4), piso y0.
+  Bounds 1.46x2.01x1.35.
+- database.json atualizado. Commit + push.
