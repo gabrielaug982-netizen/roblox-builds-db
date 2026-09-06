@@ -780,3 +780,11 @@
   cauda 5 penas em leque, pernas mais altas. Mesmo estilo quadrado, pose de galo.
   Pos (4,4), piso y0. Bounds 1.39x2.14x1.38.
 - database.json atualizado. Commit + push.
+
+## 2026-09-05 (sessao pintinho quadrado)
+- Usuario: "nao gostei apague faca outro". Galo v14 substituido.
+- Nova: misc/galinha_lowpoly_15, 14 Parts amarelo-claro. PINTINHO quadrado:
+  corpo cubo 0.55, cabeca 0.5 (grande), bico/crista/barbela rosa/laranja,
+  olhos grandes pretos, asinhas, cauda 3 peninhas, pes minusculos (sentado).
+  Pos (4,4), piso y0. Bounds 0.7x1.07x0.95.
+- database.json atualizado. Commit + push.
