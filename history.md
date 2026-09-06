@@ -704,3 +704,11 @@
   usuario em (4,4), altura 1.9, ancorada.
 - 9582728364 (Low Poly Chicken, 35 parts) e 93227986701789 (White Hen com 3 scripts) shortlist nao usados.
 - database.json atualizado (creatorStore + misc/galinha_creatorstore_01 + lastSearch). Commit + push.
+
+## 2026-09-05 (sessao galinha detalhada quadrada)
+- Usuario pediu: "faça a galinha mais detalhadas em quadrados, pescoço mais aparente e asas detalhas".
+- Galinha do Creator Store (17183525920) removida do Workspace. Nova: misc/galinha_lowpoly_05, 39 Parts
+  quadradas SmoothPlastic brancas + 38 welds ao hub CostasMeio, pos (4,4) no lugar de shadowhu2384.
+  Pescoço em 2 segmentos + garganta inclinada (bem visivel); corpo em 6 camadas; asas 3 camadas + pena frontal
+  por lado; cauda 5 penas; pernas segmentadas. Bounds 1.48x2.37x1.86. Assentada no chao (piso y0).
+- database.json atualizado. Commit + push.
