@@ -719,3 +719,11 @@
   shadowhu2384. Pescoco 2 segmentos; corpo 4 camadas; asas 3 camadas sem pena frontal; cauda 3 penas;
   crista 2 cubos; olhos Glass sem brilho; pernas segmentadas. Bounds 1.33x2.2x1.64, assente no chao.
 - database.json atualizado. Commit + push.
+
+## 2026-09-05 (sessao galinha redonda bonita)
+- Usuario pediu "refaca umas bonito" apos rejeitar a versao quadrada limpa (29 partes).
+- Nova: misc/galinha_lowpoly_07, 28 Parts SMOOTH redondas (Balls) brancas + 27 welds ao hub Corpo,
+  pos (4,4) em shadowhu2384, piso y0. Corpo/pescoco/cabeca esfericos; bico laranja 2 blocos; crista 3
+  bolinhas re vermelhas; barbela bolinha; olhos Ball preto + brilho; asas 2 bolas elipsoides/lado; cauda
+  3 bolas inclinadas; pernas cilindros + pes. Bounds 1.18x1.81x1.36.
+- database.json corrigido (JSON quebrado por aspas nao escapadas, reparado com \u0022). Commit + push.
