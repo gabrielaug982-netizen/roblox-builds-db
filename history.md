@@ -823,3 +823,10 @@
 - Usuario: "faca um limite de mapa com montanhas e etc". Galinha v23 mantida.
 - Novo: misc/limite_montanhas_01, 117 partes em Workspace.LimiteMontanhas: perimetro N/S (7 cada) + L/O (5 cada) + 4 cantos + 6 colinas internas. Cada montanha = Base Slate + Pico Wedge + Neve + BaseVerde Grass. h 35-65, w 50-82, cores cinza variadas. Envolve Baseplate 512 em x/z +-280. Camera overview 0,120,350.
 - database.json atualizado. Commit + push.
+
+## 2026-09-09 (triturador industrial v4.5)
+- Usuario: "continue" para posicionar o triturador v4.5 (do Blender, colecao TrituradorV45) no mapa Studio.
+- Novo: industrial/triturador_v45, 6 MeshParts em Workspace.TrituradorV45 (Model). Gerado via EditableMesh (AddVertex/AddTriangle/SetFaceNormals) + CreateMeshPartAsync. Materiais/cores: dark_metal (Metal 41,43,48), dark_metal2 (Metal 28,31,33), mid_grey (Slate 66,69,74), light_grey (Slate 102,105,110), black (Plastic 10,10,11), red_light (Plastic 166,20,20). Bounds 14.58x2.68x1.69, posicionado ao lado do Spawn.
+- Methodo: gen_trit_compact.py parseou OBJ/MTL (1448 verts, 1086 quads -> 2172 tris, 6 grupos usemtl) e gerou AABBs compactos; dados gravados em ModuleScript Workspace.TrituradorData; builder Lua expande cada AABB em cubo 8-vertex/6-face e monta as 6 meshes.
+- Bloqueios contornados: EditableMesh:BatchAdd indisponivel no sandbox do plugin MCP (usado AddVertex em loop); readfile/writefile nil (dados passados via ModuleScript, nao via disco); MeshPart.MeshContent readOnly (usado AssetService:CreateMeshPartAsync).
+- database.json atualizado (lastUpdated 2026-09-09). Commit + push.
