@@ -830,3 +830,15 @@
 - Methodo: gen_trit_compact.py parseou OBJ/MTL (1448 verts, 1086 quads -> 2172 tris, 6 grupos usemtl) e gerou AABBs compactos; dados gravados em ModuleScript Workspace.TrituradorData; builder Lua expande cada AABB em cubo 8-vertex/6-face e monta as 6 meshes.
 - Bloqueios contornados: EditableMesh:BatchAdd indisponivel no sandbox do plugin MCP (usado AddVertex em loop); readfile/writefile nil (dados passados via ModuleScript, nao via disco); MeshPart.MeshContent readOnly (usado AssetService:CreateMeshPartAsync).
 - database.json atualizado (lastUpdated 2026-09-09). Commit + push.
+
+## 2026-09-10 (triturador v4.5 - REBUILD geometria real via EditableMesh em runtime)
+- Problema v2: build AABB (gen_trit_compact.py) gera paralelepipedos furados/taoreta - feio.
+- Problema v3: EditableMesh criado em EDIT MODE nao persiste nem replica -> play test mostrava QUADRADO CINZA (geometria vazia).
+- Solucao v4.5: geometria REAL dos tris do OBJ (trituradorv4.5.obj, 1086 quads -> 2172 tris, 6 grupos usemtl), construida em RUNTIME a cada play por Script ServerScriptService.TriturBuilder.
+- Dados: gen_geom_module.py (reescrito) gera trit_mat_*.lua por material -> build_rbxm.py monta tritur_data.rbxm (82KB) -> importado como ReplicatedStorage.TriturData (6 ModuleScripts: black 168 tris/112 verts, mid_grey 720/480, light_grey 888/592, dark_metal2 372/248, dark_metal 12/8, red_light 12/8). ModuleScripts via execute_luau NAO persistiam; via .rbxm persistiu.
+- FIX CRITICO de replicacao: server-side CreateEditableMesh() + CreateMeshPartAsync(Content.fromObject(mesh)) deixa no cliente mesh PLACEHOLDER identico p/ todas as parts (768 faces/1536 verts) -> part invisivel/cinza. Necessario AssetService:CreateDataModelContentAsync(Content.fromObject(mesh)) ANTES do CreateMeshPartAsync -> cliente recebe geometria real (contadores batem 1:1 com fonte). EditableMesh nao tem propriedade Name (Object, nao Instance).
+- Erros corrigidos: GetBoundingBox retorna (CFrame, Size) - antes usado .Size em CFrame. Posicionamento: GetPivot().Position + LookVector (Spawn em +Z) -> 12 studs a frente.
+- Usuario: "vejo" (triturador colorido visivel). EditableMesh API habilitado pelo usuario em Experience Settings > Security (antes erro "EditableMesh is not accessible").
+- Imports antigos APAGADOS do Workspace: triturador_clean (rbxassetid://132881399022659) e liop.default (117541920405456).
+- LEMBRETE: SALVAR o lugar no Studio para persistir TriturBuilder (script some se nao salvar).
+- database.json atualizado (lastUpdated 2026-09-10). Commit + push.
