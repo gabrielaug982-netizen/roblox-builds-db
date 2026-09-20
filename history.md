@@ -856,3 +856,9 @@
 - Registrado classic/thrpillars_coreset no localBuilds do database.json (264 BaseParts no conjunto).
 - Pendencia: Models duplicados e MeshPart de Slate solto no Workspace (limpeza nao confirmada pelo usuario).
 - Obs: modelo de IA nao le screenshot; pedir confirmacao visual ao usuario.
+
+## 2026-09-19 (sessao thrpillars cores fortes)
+- Usuario: "cores mais fortes, so mude". Apenas recolorei as 7 copias (33 partes cada, geometria intacta):
+  cinza #464A52, bege/ouro #FFB300, terracota/vermelho-laranja #FF5722, verde vivo #00C853,
+  azul forte #0055FF, grafite/preto #141518, rosa vibrante #FF4081.
+- database.json atualizado (nota das cores fortes no classic/thrpillars_coreset). Commit + push.
