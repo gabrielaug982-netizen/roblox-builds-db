@@ -842,3 +842,17 @@
 - Imports antigos APAGADOS do Workspace: triturador_clean (rbxassetid://132881399022659) e liop.default (117541920405456).
 - LEMBRETE: SALVAR o lugar no Studio para persistir TriturBuilder (script some se nao salvar).
 - database.json atualizado (lastUpdated 2026-09-10). Commit + push.
+
+## 2026-09-19 (sessao thrpillars coloridos)
+- Usuario: "ta vendo o thrpillars no roblox? crie varios de diferentes cortes, cores, corrigindo".
+- Esclarecido: quer varias copias IGUAIS da coluna corintia (Workspace.thrpillars) so com cores diferentes.
+- Estrutura da coluna: Base (20.9x12.8) + 2 ColumnSegment (11.5x38.4) + CorinthianCapital (30 pecas),
+  altura total 99.36, footprint 21.19, pivot (-76.91,49.68,2.42), minY 0.26 (assente no chao).
+- Criadas 7 copias identicas em fileira ao longo de +X (espacamento 28 studs), cada uma 33 BaseParts
+  100% uniformes na cor, todas ancoradas: thrpillars_cinza (#D2D4D6), thrpillars_bege (#E2CDA6),
+  thrpillars_terracota (#B66C52), thrpillars_verde (#609478), thrpillars_azul (#6E8A9E),
+  thrpillars_grafite (#303236), thrpillars_rosa (#CDA59B). Pesos X das bases: -56..-41.8, -28..-13.8,
+  0..14.2, 28..42.2, 56..70.2, 84..98.2, 112..126.2. Original branco (0.9725) mantido.
+- Registrado classic/thrpillars_coreset no localBuilds do database.json (264 BaseParts no conjunto).
+- Pendencia: Models duplicados e MeshPart de Slate solto no Workspace (limpeza nao confirmada pelo usuario).
+- Obs: modelo de IA nao le screenshot; pedir confirmacao visual ao usuario.
