@@ -888,5 +888,7 @@
   Backpack (Granada e Onda de Choque vistas), Player1 jogado no chao -> eliminado -> 'VENCEDOR:
   Player2' -> nova rodada reiniciou com os 2 de volta nos pilares. Sem erros no log.
 - Registrado classic/thrpillars_pillars_arena no localBuilds (281 BaseParts, bounds [194,102.5,194]).
-- Pendencias: Models/MeshPart duplicados no Workspace (nao usados pelo jogo; limpeza a confirmar).
+- LIMPEZA confirmada pelo usuario ("sim, mas dps ajusto a posicao e etc"): removidos do Workspace o
+  MeshPart solto de Slate (rbxassetid://3649838276), o Model com Pillar e o Model coluna completa
+  duplicados (nao usados pelo jogo). Restam as 8 colunas (35 partes cada), VazioKill e o padrao.
 - Obs: nao leio screenshot; confirmacao visual final fica com o usuario. Commit + push.
