@@ -862,3 +862,31 @@
   cinza #464A52, bege/ouro #FFB300, terracota/vermelho-laranja #FF5722, verde vivo #00C853,
   azul forte #0055FF, grafite/preto #141518, rosa vibrante #FF4081.
 - database.json atualizado (nota das cores fortes no classic/thrpillars_coreset). Commit + push.
+
+## 2026-09-19 (sessao THE PILLARS - recriacao do mapa)
+- Usuario: "sabe o the pillars do fortnite?" e depois "o mapa" -> confirmado: THE PILLARS do Fortnite
+  Creative (codigo 2724-4064-5480, criador nexiph): FFA 8 jogadores, cada um no topo de um pilar,
+  item aleatorio a cada ~5s, derrubar adversarios dos pilares, queda elimina, ultimo em pe vence.
+- ARENA construida no Studio reaproveitando as 8 colunas coloridas do thrpillars_coreset:
+  - 8 colunas dispostas em ANEL ao redor da origem (centro XZ (0,0), raio 80, 45 em cada angulo):
+    thrpillars(80,0), cinza(56.6,56.6), bege(0,80), terracota(-56.6,56.6), verde(-80,0),
+    azul(-56.6,-56.6), grafite(0,-80), rosa(56.6,-56.6). GetPivot instavel -> PrimaryPart=Base
+    definido nas 8 (antes houve reposicionamento errado por causa disso).
+  - Topo de cada coluna: PlataformaTopo (Part 34x2x34 Slate na cor do pilar, y ~100.4) +
+    SpawnPilar (SpawnLocation Neon na cor do pilar, y ~101.4).
+  - Vazio: VazioKill (Part invisivel 400x1x400 em y 0.5..1.5, CanCollide=false, Anchored).
+- GAMEPLAY: ServerScriptService.PillarsBattle (Script, ~9KB):
+  - Rodada com >=2 jogadores (polling de 0.25s; task.wait(1) falhava porque os jogadores entram
+    depois de 1s -> rodada nunca iniciava, itens nao caíam).
+  - Item aleatorio a cada 5s trocando o do Backpack: Martelo de Empurrão (raio 14), Granada de
+    Empurrão (projetil, raio 16), Balao (flutua 2.5s + impulso, atravessa), Onda de Choque (raio 9).
+  - Queda eliminou: touch do VazioKill OU Y<0.6 -> teleporta p/ void (0,-300,0) e tira da rodada.
+  - Com 1 vivo: banner 'VOCE VENCEU! ULTIMO EM PE!' + 'VENCEDOR: X' e reinicio da rodada apos 6s.
+  - Banners via ScreenGui PillarsBanner criado pelo servidor em cada PlayerGui (banner(null) quebrava:
+    protegido com `player and`).
+- VALIDADO em multiplayer playtest (2 clientes): jogadores nascem nos SpawnPilar, itens chegam no
+  Backpack (Granada e Onda de Choque vistas), Player1 jogado no chao -> eliminado -> 'VENCEDOR:
+  Player2' -> nova rodada reiniciou com os 2 de volta nos pilares. Sem erros no log.
+- Registrado classic/thrpillars_pillars_arena no localBuilds (281 BaseParts, bounds [194,102.5,194]).
+- Pendencias: Models/MeshPart duplicados no Workspace (nao usados pelo jogo; limpeza a confirmar).
+- Obs: nao leio screenshot; confirmacao visual final fica com o usuario. Commit + push.
